@@ -1,0 +1,17 @@
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeMedian3.class
+pl/edu/pw/ee/aisd2026zex1/sorters/insort/InsertionSort.class
+pl/edu/pw/ee/aisd2026zex1/services/extratasks/SortLinkedListProblem.class
+pl/edu/pw/ee/aisd2026zex1/services/SortingCmp.class
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveLomuto.class
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeRandom.class
+pl/edu/pw/ee/aisd2026zex1/services/Sorting.class
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveHoare.class
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeLomuto.class
+pl/edu/pw/ee/aisd2026zex1/services/extratasks/ListItem.class
+pl/edu/pw/ee/aisd2026zex1/sorters/mergesort/MergeSort.class
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeHoare.class
+pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeWithInSort.class
+pl/edu/pw/ee/aisd2026zex1/sorters/countingsort/CountingSort.class
+pl/edu/pw/ee/aisd2026zex1/sorters/heapsort/HeapSort.class
+pl/edu/pw/ee/aisd2026zex1/sorters/referencesort/ReferenceAlgSort.class
+pl/edu/pw/ee/aisd2026zex1/sorters/selectionsort/SelectionSort.class

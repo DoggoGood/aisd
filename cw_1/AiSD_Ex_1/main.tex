@@ -1,0 +1,469 @@
+\documentclass[twoside]{article}
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{subcaption}
+
+\title{AiSD Ex. 1 (Pon.)}
+\author{\hl{Mateusz Kamieniecki}}
+\date{\today}
+
+\makeatletter
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\@title}
+\fancyhead[R]{\@author}
+\fancyhead[C]{\@date}
+
+\cfoot{\thepage\ / \pageref{LastPage}}
+
+
+\newpage
+
+\section{Wprowadzenie}
+Pierwsze ćwiczenie, którym się zajmiemy, będzie związane z problemem sortowania danych.
+Dla ułatwienia dalszych rozważań przyjmijmy, że mówiąc o~sortowaniu kolekcji liczb (lub łańcuchów znaków), 
+będziemy rozważali porządek leksykograficzny.
+
+Zarówno w życiu codziennym jak i w praktyce inżynierskiej dany problem może mieć wiele rozwiązań.
+Nie inaczej jest z zadaniem sortowania, dla którego powstało wiele różnych algorytmów.
+Wybór odpowiedniego algorytmu może być podyktowany szeregiem czynników, do których można zaliczyć 
+m.in.: łatwość samodzielnej implementacji, złożoność obliczeniową (czasową, pamięciową), 
+dostępność zasobów.
+W przypadku rozwiązywania problemów nieszablonowych, dla których nie istnieje gotowa instrukcja
+postępowania, poszukiwanie dobrego rozwiązania jest kompromisem pomiędzy satysfakcją 
+z~uzyskanego wyniku (złożonością algorytmu), a czasem poświęconym na jego implementację.
+Umiejętność świadomego wyważenia tych proporcji jest kompetencją inżynierską poszukiwaną 
+na rynku pracy.
+
+\subsection{Złożoność algorytmów}
+Ocena czasu pracy algorytmu jak i zużywanych przez niego zasobów pamięciowych może być wykonana bardzo dokładnie
+np. poprzez zliczenie wszystkich instrukcji, które zostaną wykonane w trakcie jego działania.
+
+Częściej jednak mówimy o klasach złożoności algorytmów przybliżając ich precyzyjnie wyliczone wartości
+asymptotycznymi złożonościami, co wynika z~faktu, że najczęściej precyzyjnie wyliczone wartości 
+są funkcjami rozmiaru danych $n$ (np.: $f(n) = an^2 + bn + c$, gdzie $a > 0$), a przy bardzo dużym rozmiarze danych
+$n$ przyjmuje się, że składniki niższych rzędów i stały współczynnik przy składniku o najwyższym rzędzie stają się nieistotne (są pomijane w rozważaniach).
+
+Do najpopularniejszych notacji zalicza się:
+\begin{itemize}
+    \item notację $O$ -- do określenia asymptotycznego ograniczenia górnego;
+    \item notację $\Omega$ -- do określenia asymptotycznego ograniczenia dolnego;
+    \item notację $\Theta$ -- do określenia asymptotycznego dokładnego oszacowania.
+\end{itemize}
+
+Na podstawie tych rozważań można napisać, że funkcja $f(n)$ ($f(n) = an^2 + bn + c$, gdzie $a > 0$), określająca
+pesymistyczny czas działania algorytmu dla danych o rozmiarze $n$, jest $O(n^2)$ ($f(n)=O(n^2)$).
+
+Biorąc to wszystko pod uwagę, zastanówmy się, jaka może być złożoność wyrażona w notacji $O$ dla poniższych 
+fragmentów kodu (\ref{lst:big_o1}, \ref{lst:big_o2}), przy założeniu, że $numsA$ i $numsB$ składają się 
+odpowiednio z $a$ i $b$ elementów.
+
+\begin{minipage}[t]{.45\textwidth}
+\begin{lstlisting}[caption={Złożoność $O(a+b)$.}, frame=tblr, language=Java, label={lst:big_o1}]
+for(int a: numsA){
+    .println(a);
+}
+
+for(int b: numsB){
+    .println(b);
+}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.45\textwidth}
+\begin{lstlisting}[caption={Złożoność $O(a*b)$.}, frame=tblr, language=Java, label={lst:big_o2}]
+for(int a: numsA){
+    for(int b: numsB){
+        .println(a + b);
+    }
+}
+\end{lstlisting}
+\end{minipage}
+
+Ma to sens, prawda?
+To spróbujmy jeszcze dwa razy (listingi: \ref{lst:big_o3}, \ref{lst:big_o4}).
+
+W przypadku listingu \ref{lst:big_o3} wykonujemy dwie niezależne pętle, a w każdej z nich kręcimy się $n$ razy,
+dlatego złożoność z $O(2n)$ redukujemy (pomijając stałe) do $O(n)$.
+
+\begin{lstlisting}[caption={Złożoność $O(n)$.}, frame=tblr, language=Java, label={lst:big_o3}]
+void countProductAndSum(int[] nums){
+    int product = 1;
+    int sum = 0;
+    int n = nums.length;
+    
+    for(int i = 0; i < n; i++){
+        product *= nums[i];
+    }
+    
+    for(int i = 0; i < n; i++){
+        sum += nums[i];
+    }
+    
+    System.out.println(
+        format("Product: %d | Sum: %d", product, sum));
+}
+\end{lstlisting}
+
+Ostatni przykład (listing \ref{lst:big_o4}) pokazuje nam dwie zagnieżdżone pętle -- dla każdego kroku ($n$ kroków)
+z pętli zewnętrznej wykonujemy n-krokową pętlę wewnętrzną, więc uzyskujemy złożoność $O(n^2)$.
+
+\begin{lstlisting}[caption={Złożoność $O(n^2)$.}, frame=tblr, language=Java, label={lst:big_o4}]
+void printEachWithEach(int[] nums){
+    int n = nums.length;
+    
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            System.out.println(
+                format("%d, %d", nums[i], nums[j]));
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{Algorytmy sortowania}
+
+Praca na uporządkowanej (posortowanej) kolekcji elementów może być celem samym w sobie, ale może być również
+pewnym etapem przejściowym prowadzącym do celu. Niezależnie od powodu, dla którego chcemy otrzymać uporządkowaną
+kolekcję, warto jest znać różnice (zalety i wady) stosowania różnych algorytmów służących do tego celu.
+
+Algorytmy różnią się pod względem m.in.: złożoności obliczeniowej (czasowej, pamięciowej), trudności implementacyjnej
+(gdy nie korzystamy z bibliotek gotowych implementacji), stabilnością sortowania, pracą w miejscu 
+(łac. \textit{in-situ}), szczególnym zachowaniem w przypadku określonego układu lub rozmiaru danych wejściowych.
+
+Przykładowo, algorytm sortowania przez wybór (ang. \textit{selection sort}) ma praktycznie taką samą złożoność
+czasową $O(n^2)$ niezależnie od układu danych wejściowych. A algorytm sortowania przez wstawianie (ang. 
+\textit{insertion sort}) dla małych rozmiarów danych wejściowych lub danych prawie uporządkowanych 
+(wstępnie posortowanych) działa znacznie szybciej (nawet $\Theta(n)$).
+
+Omówienie zarówno podstawowych jak i bardziej specyficznych algorytmów sortowania można znaleźć we 
+\textit{Wprowadzeniu do algorytmów} Cormena i in., dlatego te treści nie będą tutaj szczegółowo powielane.
+Warto jednak podkreślić kilka szczególnych faktów, które będą istotne przy wykonaniu pierwszego
+ćwiczenia laboratoryjnego.
+
+Algorytm sortowania przez kopcowanie (ang. \textit{heap sort}) swoje działanie opiera na właściwościach 
+tablicowej struktury danych jaką jest \textbf{kopiec binarny} -- wygodnie jest ją rozpatrywać teoretycznie jako drzewo binarne.
+Najczęściej mówimy o \textbf{maksymalnym kopcu}, co oznacza, że w jego korzeniu znajduje się największa wartość, a 
+relacja między rodzicem a potomkami (czyli \textbf{własność kopca}) określa, że rodzic nie może być mniejszy
+od swoich dzieci.
+Kopiec ten jest również \textbf{kopcem zupełnym} (drzewem), a tym samym liście w tym kopcu mogą występować tylko
+na dwóch ostatnich poziomach.
+Spełnienie \textbf{własności kształtu} oznacza, że nowi potomkowie dołączają do drzewa na pierwszą wolną pozycję.
+
+Algorytm szybkiego sortowania (ang. \textit{quick sort}) jest jednym z częściej wykorzystywanych algorytmów sortujących
+(wraz ze swoimi ulepszeniami i wariantami implementacyjnymi). Nie jest on jednak algorytmem, który jest najlepszym
+wyborem do każdego zadania, choć zdecydowanie korzystnie wypada w użyciu dla typowych, ,,codziennych'' sytuacji.
+
+Algorytm ten występuje w dwóch popularnych wariantach zaproponowanych przez Sir Tony'ego Hoare'a i Nico Lomuto.
+Jest to algorytm z grupy ,,dziel i zwyciężaj'', co oznacza (jak wynika z nazwy), że składa się z \st{dwóch} trzech etapów: dziel, zwyciężaj, połącz. A przytoczone warianty różnią się właśnie wykorzystaną metodą podziału.
+
+Najwygodniej jest (tylko dla celów poglądowych, ale \textbf{nigdy dla docelowej implementacji}) przedstawić algorytm
+szybkiego sortowania przy pomocy rekurencji. Nie jest to jednak zalecany sposób wykonywania implementacji ze względu
+na koszt (i ryzyko błędu) działania takiego kodu.
+
+\begin{lstlisting}[caption={QuickSort (met. Lomuto) -- poglądowa wersja rekurencyjna}, frame=tblr, language=Java, label={lst:qsort_lomuto_rec}]
+void quickSort(double[] nums, int left, int right) {
+    if (left < right) {
+
+        int pivotId = partition(nums, left, right);
+
+        quickSort(nums, left, pivotId - 1);
+        quickSort(nums, pivotId + 1, right);
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={QuickSort (met. Hoare'a) -- poglądowa wersja rekurencyjna}, frame=tblr, language=Java, label={lst:qsort_hoare_rec}]
+void quickSort(double[] nums, int left, int right) {
+    if (left < right) {
+
+        int pivotId = partition(nums, left, right);
+
+        quickSort(nums, left, pivotId);
+        quickSort(nums, pivotId + 1, right);
+    }
+}
+\end{lstlisting}
+
+Listingi \ref{lst:qsort_lomuto_rec}. i \ref{lst:qsort_hoare_rec}. pokazują przykładową rekurencyjną implementację
+algorytmu szybkiego sortowania przy założeniu, że metoda \verb|partition(...)| wykonuje podział odpowiednio 
+podejściem Lomuto lub Hoare'a.
+
+Z pokazanego kodu wyraźnie widać (przy założeniu, że ten kod jest prawidłowy), że najistotniejszym elementem 
+w algorytmie szybkiego sortowania jest właśnie procedura podziału zwracająca indeks elementu osiowego (rozdzielającego).
+Celem wykonania podziału jest przeniesienie elementów w taki sposób, żeby po lewej stronie były elementy mniejsze 
+(bądź równe) wartości rozdzielającej, a po prawej stronie -- elementy większe.
+
+Różnica w podejściu Hoare'a i Lomuto związana jest z tym, który element zostaje wybrany jako element rozdzielający, 
+i w którym miejscu (po podziale) ostatecznie znajduje się ten element.
+
+Algorytmem sortującym szczególnego przeznaczenia (nie dla każdych danych) jest algorytm sortowania przez zliczanie
+(ang. \textit{counting sort}). Ten algorytm dla zestawu danych (powtarzających się liczb z góry ograniczonego zakresu znacznie mniejszego niż rozmiar danych) może działać ze złożonością $O(n)$. Trzeba jednak ciągle mieć na uwadze, że
+nie jest to algorytm ogólnego przeznaczenia.
+A najistotniejszym novum -- względem pozostałych algorytmów -- jest wykorzystanie dodatkowej pamięci na stworzenie \verb|nOfCounters| liczników zliczających wystąpienie poszczególnych wartości przypisanych do danego kubełka.
+
+\begin{lstlisting}[caption={Counting sort}, frame=tblr, language=Java, label={lst:counting_sort}]
+void countingSort(int[] nums, int maxVal) {
+    // ... validateInput
+
+    int n = nums.length;
+    int nOfCounters = maxVal + 1;
+
+    int[] counters = new int[nOfCounters];
+
+    for (int i = 0; i < n; i++) {
+        counters[nums[i]]++;
+    }
+
+    int j = 0;
+    for (int i = 0; i < nOfCounters; i++) {
+        while (counters[i] > 0) {
+            nums[j++] = i;
+            counters[i]--;
+        }
+    }
+}
+\end{lstlisting}
+
+\section{Zadania}
+
+\subsection{Zadanie 1.}
+Proszę, wykorzystując notację wielkiego $O$, określić asymptotyczną złożoność czasową trzech poniższych fragmentów kodu.
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|}
+\hline
+Lp. & Nr przykładu & Złożoność O(?) \\ \hline
+1.  & A            & O(n^2)               \\ \hline
+2.  & B            & O(numsA.length * numsB.length)               \\ \hline
+3.  & C            & O(n)               \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{lstlisting}[caption={Zad. 1 (A)}, frame=tblr, language=Java]
+void printHalfOfPairs(int[] nums) {
+    int n = nums.length; // may be null!
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            System.out.println(
+                format("(%d, %d)", nums[i], nums[j]));
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Zad. 1 (B)}, frame=tblr, language=Java]
+void printSmallerPairs(int[] numsA, int[] numsB) {
+    // may be nulls!
+    for (int i = 0; i < numsA.length; i++) {
+        for (int j = 0; j < numsB.length; j++) {
+            if (numsA[i] < numsB[j]) {
+                System.out.println(
+                 format("(%d, %d)", numsA[i], numsB[j]));
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Zad. 1 (C)}, frame=tblr, language=Java]
+void reverse(int[] nums) {
+    int n = nums.length; // may be null!
+    int rightId, leftVal;
+
+    for (int i = 0; i < n / 2; i++) {
+        rightId = n - i - 1;
+        leftVal = nums[i];
+        nums[i] = nums[rightId];
+        nums[rightId] = leftVal;
+    }
+}
+\end{lstlisting}
+
+\subsection{Zadanie 2.}
+Proszę określić (\textbf{T}ak lub \textbf{N}ie), który z poniższych zapisów jest tożsamy asymptotycznej złożoności $O(n)$ (wiadomo, że dla dużej wartości $n$). Proszę podać \underline{krótkie} uzasadnienie (najlepiej jako równoważnik zdania).
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+Lp. & Przykład                      & Czy jest O(n)? & Uzasadnienie \\ \hline
+1.  & O(n+k), gdzie k \textless n/3 & Tak               & O(n+(1/3)n) = O((4/3)n) = O(n)              \\ \hline
+2.  & O(2n)                         & Tak               & Stała ominięta             \\ \hline
+3.  & O(n+m)                        & Nie               & n i m to nie stałe             \\ \hline
+4.  & O(n+log(n))                   & Tak               & n rośnie szybciej niż log(n)             \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Zadanie 3.}
+W kodzie źródłowym zostały umieszczone dwie klasy (\verb|QuickSortIterativeHoare|, \verb|QuickSortIterativeLomuto|) 
+dla implementacji algorytmu szybkiego sortowania z wykorzystaniem metod podziału Hoare'a i Lomuto.
+Proszę wybrać jedną z tych metod podziału, a następnie proszę zaimplementować trzy klasy
+teoretycznie usprawniające działanie algorytmu szybkiego sortowania:
+
+\begin{itemize}
+    \item \verb|QuickSortIterativeMedian3| -- wybór elementu rozdzielającego (pivot) jako mediany z trzech wartości;
+    \item \verb|QuickSortIterativeRandom| -- wybór elementu rozdzielającego (pivot) jako elementu losowo wybranego;
+    \item \verb|QuickSortIterativeWithInSort| -- wykorzystanie sortowania przez wstawianie dla małych ($n < 20$) podproblemów.
+\end{itemize}
+
+\subsection{Zadanie 4.}
+Proszę, wykorzystując otrzymany kod uzupełniony o własne implementacje, wykonać wykresy (nie, nie trzeba pisać kodu tworzącego wykres -- arkusz kalkulacyjny jest wystarczająco dobrym narzędziem)
+pokazujący, jak zmienia się czas wykonania algorytmu w zależności od rozmiaru danych wejściowych.
+Proszę wykonać wykresy w skali logarytmicznej na osi OY.
+Na podstawie otrzymanych wykresów, proszę uzupełnić poniższą tabelę.
+
+Do tego celu można wykorzystać pakiet testów \verb|performance.table|.
+Zadanie dla chętnych: zamiast wspomnianego pakietu, proszę wykorzystać pakiet \verb|performance.charts|. 
+Trzeba w nim wprowadzić trochę zmian, aby nie było konieczności tworzenia kilkudziesięciu klas, ale dzięki temu
+wykres będzie bardziej ,,estetyczny'' (dokładniejszy).
+
+\begin{table}[h]
+    \begin{tabular}{|l|l|l|}
+    \hline
+    Lp. & Kategoria & \begin{tabular}[c]{@{}l@{}}Algorytm\\ (lub algorytmy)\end{tabular} \\ \hline
+    1. & Najlepszy algorytm dla danych losowych &  \\ \hline
+    2. & Najlepszy algorytm dla danych rosnących &  \\ \hline
+    3. & Najlepszy algorytm dla danych malejących &  \\ \hline \hline
+    4. & Najgorszy algorytm dla danych losowych &  \\ \hline
+    5. & Najgorszy algorytm dla danych rosnących &  \\ \hline
+    6. & Najgorszy algorytm dla danych malejących &  \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[!htb]
+    \centering
+    
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{example-image-a}
+        \caption{Czas sortowania dla danych losowych.}
+        \label{fig:sorters_random_data}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{example-image-b}
+        \caption{Czas sortowania dla danych rosnących.}
+        \label{fig:sorters_ascending_data}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{example-image-c}
+        \caption{Czas sortowania dla danych malejących.}
+        \label{fig:sorters_descending_data}
+    \end{subfigure}
+    
+    \caption{Wykresy pokazują, jak zmienia się czas sortowania w zależności od rozmiaru danych dla algorytmów: sortowania przez wstawianie, sortowania przez wybór, sortowania szybkiego (różne warianty), sortowania przez scalanie, sortowania przez kopcowanie, sortowania referencyjnego.}
+\end{figure}
+
+\newpage
+\subsection{Zadanie 5.}
+
+Proszę, wykorzystując otrzymany kod uzupełniony (i poprawiony) o własne implementacje, uzupełnić klasę testów jednostkowych \verb|MergeSortStabilityTest| o metody pokazujące, czy sortowanie przez
+scalanie jest algorytmem sortującym stabilnie.
+Przykładowy (wybranych z samodzielnie zaimplementowanych) test proszę umieścić w listingu \ref{lst:mergeSortStable}.
+
+\begin{lstlisting}[caption={Przykładowa metoda testowa dla MergeSort pokazująca, że algorytm jest stabilny.},
+frame=tblr, language=Java, label=lst:mergeSortStable]
+// TODO: placeholder for test method
+\end{lstlisting}
+
+
+\newpage
+\subsection{Zadanie 6.}
+
+Proszę, wykorzystując otrzymany kod uzupełniony o własne implementacje, uzupełnić poniższą tabelę 
+pokazującą, jaki wpływ na czas sortowania ma typ (prosty, złożony) sortowanych danych.
+W wybranych klasach konieczne jest zaimplementowanie dodatkowego interfejsu \verb|Sorting| 
+(oraz dodatkowych klas testów).
+Proszę \underline{krótko} skomentować otrzymane wartości.
+
+%---------------------------------------------------------
+% Please, use this tool: https://www.tablesgenerator.com/#
+%---------------------------------------------------------
+\begin{table}[h]
+\begin{tabular}{|l|l|ll|ll|ll|}
+\hline
+\multirow{2}{*}{Lp.} & \multirow{2}{*}{Rozmiar} & \multicolumn{2}{c|}{InsertionSort} & \multicolumn{2}{l|}{ReferenceSort} & \multicolumn{2}{c|}{SelectionSort} \\ \cline{3-8} 
+ &  & \multicolumn{1}{l|}{Integer} & int & \multicolumn{1}{c|}{Integer} & \multicolumn{1}{c|}{int} & \multicolumn{1}{l|}{Integer} & int \\ \hline
+1. & 1024 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+2. & 2048 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+3. & 4096 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+4. & 8192 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+5. & 16384 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+6. & 32768 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+7. & 65536 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+8. & 131072 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+9. & 262144 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+10. & 524288 & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  & \multicolumn{1}{l|}{} &  \\ \hline
+\end{tabular}
+\end{table}
+
+Komentarz (a.k.a. wnioski): \textbf{\hl{TODO -----------------------------------------}}.
+
+\newpage
+\subsection{Zadanie 7.}
+
+Proszę, wykorzystując otrzymany kod, ustalić, jaka jest optymalna wartość podproblemów podczas
+wykonywania algorytmu szybkiego sortowania na załączenie sortowania przez wstawianie.
+Przeprowadzoną analizę proszę zobrazować na wykresie.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{example-image-a}
+    \caption{Wykres pokazuje, jak zmienia się czas sortowania tablicy losowo uporządkowanych wartości algorytmem szybkiego sortowania (z dołączonym algorytmem sortowania przez wstawianie), w zależności od wielkości podproblemu, dla którego dołączany jest ten algorytm (sortowania przez wstawianie).}
+    \label{fig:qsort_and_insort_optimal_value}
+\end{figure}
+
+Komentarz (a.k.a. wnioski): \textbf{\hl{TODO -----------------------------------------}}.
+
+\newpage
+\subsection{Zadanie 8.}
+
+Proszę samodzielnie przygotować pakiet testów wydajnościowych dla algorytmu sortowania przez zliczanie.
+Testy powinny pomóc w przygotowaniu wykresu pokazującego, jak zmienia się czas sortowania danych, 
+gdy zestaw danych jest zestawem ,,przypadkowym'' (czyli bez powtórzeń), oraz w przypadku, gdy zestaw danych
+jest zestawem preferowanym przez algorytm sortowania przez zliczanie (z wieloma powtórzeniami).
+
+Miejsce na wykres oraz komentarz również należy stworzyć sobie samodzielnie w tej sekcji.
+
+\newpage
+\subsection{Zadanie 9.}
+
+Proszę, korzystając z kodu źródłowego Javy oraz dokumentacji (Javadoc), podać, kto jest autorem
+wykorzystywanego algorytmu sortowania dla tablicy liczb całkowitych (\verb|int[]|).
+Proszę również określić, czym szczególnym charakteryzuje się ta implementacja.
+
+Proszę na dowód załączyć zrzut ekranu pokazujący istotny fragment dokumentacji (Javadoc).
+
+Odpowiedź: \textbf{\hl{TODO -----------------------------------------------------------}}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{example-image}
+    \caption{Zrzut ekranu z fragmentem dokumentacji dla metody sortującej tablicę liczb całkowitych. 
+    Pokazana jest nazwa klasy wraz z opisem, kto jest jej autorem.}
+    \label{fig:java_sort_alg_screenshot}
+\end{figure}
+
+\subsection{Zadanie 10.}
+
+Proszę zweryfikować poprawność otrzymanych i wykonanych implementacji algorytmów poprzez napisanie testów jednostkowych.
+\underline{Każda klasa} implementująca algorytm powinna być przetestowana. 
+
+Proszę to zadanie wykonać w sposób przemyślany (kopiowanie i powielanie kodu testów pomiędzy klasami jest ostatnim
+krokiem, na który należy się zdecydować).
+W celu zniwelowania redundancji kodu testów, proszę wykorzystać cechy paradygmatu programowania obiektowego.
+
+\end{document}

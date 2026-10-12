@@ -1,0 +1,17 @@
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/services/Sorting.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/services/SortingCmp.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/services/extratasks/ListItem.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/services/extratasks/SortLinkedListProblem.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/countingsort/CountingSort.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/heapsort/HeapSort.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/insort/InsertionSort.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/mergesort/MergeSort.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeHoare.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeLomuto.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeMedian3.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeRandom.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeWithInSort.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveHoare.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveLomuto.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/referencesort/ReferenceAlgSort.java
+/home/pawel/Downloads/USUN_AISD/AiSD2025ZEx1/src/main/java/pl/edu/pw/ee/aisd2026zex1/sorters/selectionsort/SelectionSort.java
