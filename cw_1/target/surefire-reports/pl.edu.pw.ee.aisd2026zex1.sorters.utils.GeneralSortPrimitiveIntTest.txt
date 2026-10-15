@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: pl.edu.pw.ee.aisd2026zex1.sorters.utils.GeneralSortPrimitiveIntTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! -- in pl.edu.pw.ee.aisd2026zex1.sorters.utils.GeneralSortPrimitiveIntTest
+pl.edu.pw.ee.aisd2026zex1.sorters.utils.GeneralSortPrimitiveIntTest.should_ThrowException_When_InputIsNull -- Time elapsed: 0 s <<< ERROR!
+org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [pl.edu.pw.ee.aisd2026zex1.services.Sorting arg0] in constructor [public pl.edu.pw.ee.aisd2026zex1.sorters.utils.GeneralSortPrimitiveIntTest(pl.edu.pw.ee.aisd2026zex1.services.Sorting)].
+	at java.base/java.util.Optional.orElseGet(Optional.java:368)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.11)  12 OCT 2026 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.14)  14 OCT 2026 12:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -391,7 +391,7 @@ Here is how much of TeX's memory you used:
  34 hyphenation exceptions out of 8191
  67i,15n,77p,432b,1946s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (13 pages, 154166 bytes).
+Output written on main.pdf (13 pages, 154167 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream

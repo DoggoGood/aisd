@@ -1,4 +1,4 @@
-PWD /home/doggo/code/stud/aisd/cw_1/AiSD_Ex_1
+PWD /home/doggo/code/aisd/cw_1/AiSD_Ex_1
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex

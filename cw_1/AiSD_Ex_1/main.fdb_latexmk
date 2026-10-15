@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1791797365.62927 "main.tex" "main.pdf" "main" 1791797365.85789 2
+["pdflatex"] 1791972790.75012 "main.tex" "main.pdf" "main" 1791972790.99247 2
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1775415801 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plmi.enc" 1775415801 2005 f094775651a1386335c158fb632529f1 ""
@@ -89,10 +89,10 @@
   "/usr/share/texmf-dist/tex/latex/polski/ot4cmtt.fd" 1775415801 1780 6238272cd0272d5c6409be0ed01869b8 ""
   "/usr/share/texmf-dist/tex/latex/polski/polski.sty" 1775415801 13344 a993928ba746ec4e012bfd315bcc48d8 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791732619 5391761 abf78329ed836cdeddb87472dffb693d ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1791732596 3101950 364b13da63e1f8d9d29074825f719856 ""
-  "main.aux" 1791797365.83351 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
-  "main.tex" 1791797364.69504 22321 00dce5256ee470589dbb257959ea4ea1 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791972761 5391761 abf78329ed836cdeddb87472dffb693d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1791972727 3101950 9c2046fac31f50106e57a2574a7e8583 ""
+  "main.aux" 1791972790.96283 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
+  "main.tex" 1791909594.81576 22321 00dce5256ee470589dbb257959ea4ea1 ""
   (generated)
   "main.aux"
   "main.log"
