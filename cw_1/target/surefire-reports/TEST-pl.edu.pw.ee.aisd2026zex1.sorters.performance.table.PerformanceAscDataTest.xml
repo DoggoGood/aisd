@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceAscDataTest" time="104.024" tests="1" errors="0" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="27"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/doggo/code/aisd/cw_1/target/test-classes:/home/doggo/code/aisd/cw_1/target/classes:/home/doggo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.0/junit-jupiter-engine-6.0.0.jar:/home/doggo/.m2/repository/org/junit/platform/junit-platform-engine/6.0.0/junit-platform-engine-6.0.0.jar:/home/doggo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/doggo/.m2/repository/org/junit/platform/junit-platform-commons/6.0.0/junit-platform-commons-6.0.0.jar:/home/doggo/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.0/junit-jupiter-api-6.0.0.jar:/home/doggo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/doggo/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/doggo/.m2/repository/org/assertj/assertj-core/4.0.0-M1/assertj-core-4.0.0-M1.jar:/home/doggo/.m2/repository/net/bytebuddy/byte-buddy/1.17.1/byte-buddy-1.17.1.jar"/>
+    <property name="java.vm.vendor" value="Arch Linux"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://openjdk.org/"/>
+    <property name="user.timezone" value="Europe/Warsaw"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="27"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="PL"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-27-openjdk/lib"/>
+    <property name="sun.java.command" value="/home/doggo/code/aisd/cw_1/target/surefire/surefirebooter-20261016200401812_3.jar /home/doggo/code/aisd/cw_1/target/surefire 2026-10-16T20-04-01_783-jvmRun1 surefire-20261016200401812_1tmp surefire_0-20261016200401812_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="PerformanceAscDataTest"/>
+    <property name="surefire.test.class.path" value="/home/doggo/code/aisd/cw_1/target/test-classes:/home/doggo/code/aisd/cw_1/target/classes:/home/doggo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.0/junit-jupiter-engine-6.0.0.jar:/home/doggo/.m2/repository/org/junit/platform/junit-platform-engine/6.0.0/junit-platform-engine-6.0.0.jar:/home/doggo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/doggo/.m2/repository/org/junit/platform/junit-platform-commons/6.0.0/junit-platform-commons-6.0.0.jar:/home/doggo/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.0/junit-jupiter-api-6.0.0.jar:/home/doggo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/doggo/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/doggo/.m2/repository/org/assertj/assertj-core/4.0.0-M1/assertj-core-4.0.0-M1.jar:/home/doggo/.m2/repository/net/bytebuddy/byte-buddy/1.17.1/byte-buddy-1.17.1.jar"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/doggo"/>
+    <property name="user.language" value="pl"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-09-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-27-openjdk"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/doggo/code/aisd/cw_1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/doggo/code/aisd/cw_1/target/surefire/surefirebooter-20261016200401812_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="27"/>
+    <property name="user.name" value="doggo"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="7.2.10-1-cachyos"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/doggo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="27"/>
+    <property name="user.dir" value="/home/doggo/code/aisd/cw_1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Arch Linux"/>
+    <property name="java.vm.version" value="27"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="71.0"/>
+  </properties>
+  <testcase name="runPerformanceTest" classname="pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceAscDataTest" time="104.019">
+    <system-out><![CDATA[       InsertionSort |    2048 | 24077,0
+       InsertionSort |    4096 | 51025,0
+       InsertionSort |    8192 | 17196,0
+       InsertionSort |   16384 | 24353,0
+       InsertionSort |   32768 | 48639,0
+       InsertionSort |   65536 | 102850
+       InsertionSort |  131072 | 214953
+       SelectionSort |    2048 | 1,04562e+06
+       SelectionSort |    4096 | 4,19549e+06
+       SelectionSort |    8192 | 1,67203e+07
+       SelectionSort |   16384 | -1,00000
+       SelectionSort |   32768 | -1,00000
+       SelectionSort |   65536 | -1,00000
+       SelectionSort |  131072 | -1,00000
+QuickSortRecursiveHoare |    2048 | 1,24042e+06
+QuickSortRecursiveHoare |    4096 | 4,92453e+06
+QuickSortRecursiveHoare |    8192 | 1,96188e+07
+QuickSortRecursiveHoare |   16384 | -1,00000
+QuickSortRecursiveHoare |   32768 | -1,00000
+QuickSortRecursiveHoare |   65536 | -1,00000
+QuickSortRecursiveHoare |  131072 | -1,00000
+QuickSortIterativeHoare |    2048 | 1,34518e+06
+QuickSortIterativeHoare |    4096 | 6,48133e+06
+QuickSortIterativeHoare |    8192 | 2,57925e+07
+QuickSortIterativeHoare |   16384 | -1,00000
+QuickSortIterativeHoare |   32768 | -1,00000
+QuickSortIterativeHoare |   65536 | -1,00000
+QuickSortIterativeHoare |  131072 | -1,00000
+QuickSortIterativeRandom |    2048 | 207554
+QuickSortIterativeRandom |    4096 | 251925
+QuickSortIterativeRandom |    8192 | 353758
+QuickSortIterativeRandom |   16384 | 718112
+QuickSortIterativeRandom |   32768 | 1,48521e+06
+QuickSortIterativeRandom |   65536 | 3,04591e+06
+QuickSortIterativeRandom |  131072 | 6,26755e+06
+QuickSortIterativeWithInSort |    2048 | 1,40594e+06
+QuickSortIterativeWithInSort |    4096 | 1,14966e+07
+QuickSortIterativeWithInSort |    8192 | 4,63769e+07
+QuickSortIterativeWithInSort |   16384 | -1,00000
+QuickSortIterativeWithInSort |   32768 | -1,00000
+QuickSortIterativeWithInSort |   65536 | -1,00000
+QuickSortIterativeWithInSort |  131072 | -1,00000
+QuickSortIterativeMedian3 |    2048 | 241667
+QuickSortIterativeMedian3 |    4096 | 171167
+QuickSortIterativeMedian3 |    8192 | 506674
+QuickSortIterativeMedian3 |   16384 | 498456
+QuickSortIterativeMedian3 |   32768 | 899654
+QuickSortIterativeMedian3 |   65536 | 1,93041e+06
+QuickSortIterativeMedian3 |  131072 | 4,33547e+06
+           MergeSort |    2048 | 436877
+           MergeSort |    4096 | 364702
+           MergeSort |    8192 | 2,67768e+06
+           MergeSort |   16384 | 1,15936e+07
+           MergeSort |   32768 | 3,94449e+07
+           MergeSort |   65536 | -1,00000
+           MergeSort |  131072 | -1,00000
+            HeapSort |    2048 | 329380
+            HeapSort |    4096 | 577258
+            HeapSort |    8192 | 1,25648e+06
+            HeapSort |   16384 | 2,67564e+06
+            HeapSort |   32768 | 5,72836e+06
+            HeapSort |   65536 | 1,20296e+07
+            HeapSort |  131072 | 2,54054e+07
+]]></system-out>
+    <system-err><![CDATA[paź 16, 2026 8:04:09 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:14 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:19 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:24 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:31 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:32 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: &amp#27;[31mCaught StackOverflow!&amp#27;[0m
+paź 16, 2026 8:04:32 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: &amp#27;[31mCaught StackOverflow!&amp#27;[0m
+paź 16, 2026 8:04:34 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: &amp#27;[31mCaught StackOverflow!&amp#27;[0m
+paź 16, 2026 8:04:42 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:47 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:52 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:04:57 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:05:09 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:05:14 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:05:19 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:05:24 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:05:36 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+paź 16, 2026 8:05:41 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+]]></system-err>
+  </testcase>
+</testsuite>

@@ -14,7 +14,15 @@ import static java.util.logging.Level.WARNING;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 import pl.edu.pw.ee.aisd2026zex1.services.SortingCmp;
+import pl.edu.pw.ee.aisd2026zex1.sorters.heapsort.HeapSort;
+import pl.edu.pw.ee.aisd2026zex1.sorters.insort.InsertionSort;
+import pl.edu.pw.ee.aisd2026zex1.sorters.mergesort.MergeSort;
 import pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.QuickSortIterativeHoare;
+import pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.improvements.QuickSortIterativeMedian3;
+import pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.improvements.QuickSortIterativeRandom;
+import pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.improvements.QuickSortIterativeWithInSort;
+import pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.recursive.QuickSortRecursiveHoare;
+import pl.edu.pw.ee.aisd2026zex1.sorters.selectionsort.SelectionSort;
 
 public abstract class PerformanceTest<T extends Comparable<T>> {
 
@@ -33,15 +41,15 @@ public abstract class PerformanceTest<T extends Comparable<T>> {
     private List<SortingCmp<T>> getListOfSorters() {
         List<SortingCmp<T>> sorters = new ArrayList<>();
 
-//        sorters.add(new InsertionSort());
-//        sorters.add(new SelectionSort());
-//        sorters.add(new QuickSortRecursiveHoare());
+        sorters.add(new InsertionSort());
+        sorters.add(new SelectionSort());
+        sorters.add(new QuickSortRecursiveHoare());
         sorters.add(new QuickSortIterativeHoare());
-//        sorters.add(new QuickSortIterativeRandom());
-//        sorters.add(new QuickSortIterativeWithInSort());
-//        sorters.add(new QuickSortIterativeMedian3());
-//        sorters.add(new MergeSort());
-//        sorters.add(new HeapSort());
+        sorters.add(new QuickSortIterativeRandom());
+        sorters.add(new QuickSortIterativeWithInSort());
+        sorters.add(new QuickSortIterativeMedian3());
+        sorters.add(new MergeSort());
+        sorters.add(new HeapSort());
         // TODO: rest of algorithms
         return sorters;
     }

@@ -39,7 +39,7 @@ public class Generators {
         double start = 100_000_000;
 
         for (int i = size - 1; i >= 0; i--) {
-            nums[i] = start + i;
+            nums[i] = start + (size - i - 1);
         }
 
         return nums;

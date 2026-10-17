@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.improvements.QuickSortIterativeMedian3Test
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.188 s -- in pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.improvements.QuickSortIterativeMedian3Test
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 s -- in pl.edu.pw.ee.aisd2026zex1.sorters.quicksort.iterative.improvements.QuickSortIterativeMedian3Test

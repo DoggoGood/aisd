@@ -1,0 +1,139 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< pl.edu.pw.ee:AiSD2026ZEx1 >----------------------
+[INFO] Building AiSD2026ZEx1 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24112 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ AiSD2026ZEx1 ---
+[INFO] skip non existing resourceDirectory /home/doggo/code/aisd/cw_1/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ AiSD2026ZEx1 ---
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ AiSD2026ZEx1 ---
+[INFO] skip non existing resourceDirectory /home/doggo/code/aisd/cw_1/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ AiSD2026ZEx1 ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.6.0:test (default-test) @ AiSD2026ZEx1 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceAscDataTest
+       InsertionSort |    2048 | 24077,0
+       InsertionSort |    4096 | 51025,0
+       InsertionSort |    8192 | 17196,0
+       InsertionSort |   16384 | 24353,0
+       InsertionSort |   32768 | 48639,0
+       InsertionSort |   65536 | 102850
+       InsertionSort |  131072 | 214953
+       SelectionSort |    2048 | 1,04562e+06
+       SelectionSort |    4096 | 4,19549e+06
+       SelectionSort |    8192 | 1,67203e+07
+paź 16, 2026 8:04:09 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       SelectionSort |   16384 | -1,00000
+paź 16, 2026 8:04:14 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       SelectionSort |   32768 | -1,00000
+paź 16, 2026 8:04:19 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       SelectionSort |   65536 | -1,00000
+paź 16, 2026 8:04:24 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       SelectionSort |  131072 | -1,00000
+QuickSortRecursiveHoare |    2048 | 1,24042e+06
+QuickSortRecursiveHoare |    4096 | 4,92453e+06
+QuickSortRecursiveHoare |    8192 | 1,96188e+07
+paź 16, 2026 8:04:31 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortRecursiveHoare |   16384 | -1,00000
+paź 16, 2026 8:04:32 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: Caught StackOverflow!
+QuickSortRecursiveHoare |   32768 | -1,00000
+paź 16, 2026 8:04:32 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: Caught StackOverflow!
+QuickSortRecursiveHoare |   65536 | -1,00000
+paź 16, 2026 8:04:34 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: Caught StackOverflow!
+QuickSortRecursiveHoare |  131072 | -1,00000
+QuickSortIterativeHoare |    2048 | 1,34518e+06
+QuickSortIterativeHoare |    4096 | 6,48133e+06
+QuickSortIterativeHoare |    8192 | 2,57925e+07
+paź 16, 2026 8:04:42 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeHoare |   16384 | -1,00000
+paź 16, 2026 8:04:47 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeHoare |   32768 | -1,00000
+paź 16, 2026 8:04:52 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeHoare |   65536 | -1,00000
+paź 16, 2026 8:04:57 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeHoare |  131072 | -1,00000
+QuickSortIterativeRandom |    2048 | 207554
+QuickSortIterativeRandom |    4096 | 251925
+QuickSortIterativeRandom |    8192 | 353758
+QuickSortIterativeRandom |   16384 | 718112
+QuickSortIterativeRandom |   32768 | 1,48521e+06
+QuickSortIterativeRandom |   65536 | 3,04591e+06
+QuickSortIterativeRandom |  131072 | 6,26755e+06
+QuickSortIterativeWithInSort |    2048 | 1,40594e+06
+QuickSortIterativeWithInSort |    4096 | 1,14966e+07
+QuickSortIterativeWithInSort |    8192 | 4,63769e+07
+paź 16, 2026 8:05:09 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeWithInSort |   16384 | -1,00000
+paź 16, 2026 8:05:14 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeWithInSort |   32768 | -1,00000
+paź 16, 2026 8:05:19 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeWithInSort |   65536 | -1,00000
+paź 16, 2026 8:05:24 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortIterativeWithInSort |  131072 | -1,00000
+QuickSortIterativeMedian3 |    2048 | 241667
+QuickSortIterativeMedian3 |    4096 | 171167
+QuickSortIterativeMedian3 |    8192 | 506674
+QuickSortIterativeMedian3 |   16384 | 498456
+QuickSortIterativeMedian3 |   32768 | 899654
+QuickSortIterativeMedian3 |   65536 | 1,93041e+06
+QuickSortIterativeMedian3 |  131072 | 4,33547e+06
+           MergeSort |    2048 | 436877
+           MergeSort |    4096 | 364702
+           MergeSort |    8192 | 2,67768e+06
+           MergeSort |   16384 | 1,15936e+07
+           MergeSort |   32768 | 3,94449e+07
+paź 16, 2026 8:05:36 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+           MergeSort |   65536 | -1,00000
+paź 16, 2026 8:05:41 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+           MergeSort |  131072 | -1,00000
+            HeapSort |    2048 | 329380
+            HeapSort |    4096 | 577258
+            HeapSort |    8192 | 1,25648e+06
+            HeapSort |   16384 | 2,67564e+06
+            HeapSort |   32768 | 5,72836e+06
+            HeapSort |   65536 | 1,20296e+07
+            HeapSort |  131072 | 2,54054e+07
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 104.0 s -- in pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceAscDataTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:44 min
+[INFO] Finished at: 2026-10-16T20:05:46+02:00
+[INFO] ------------------------------------------------------------------------

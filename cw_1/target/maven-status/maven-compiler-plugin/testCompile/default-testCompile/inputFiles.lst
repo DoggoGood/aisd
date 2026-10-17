@@ -14,6 +14,8 @@
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeHoareTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeLomutoTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeMedian3Test.java
+/home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeRandomTest.java
+/home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeWithInSortTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveHoareTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveLomutoTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/referencesort/ReferenceAlgSortTest.java

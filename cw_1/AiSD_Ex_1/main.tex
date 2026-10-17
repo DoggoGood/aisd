@@ -331,12 +331,12 @@ wykres będzie bardziej ,,estetyczny'' (dokładniejszy).
     \begin{tabular}{|l|l|l|}
     \hline
     Lp. & Kategoria & \begin{tabular}[c]{@{}l@{}}Algorytm\\ (lub algorytmy)\end{tabular} \\ \hline
-    1. & Najlepszy algorytm dla danych losowych &  \\ \hline
-    2. & Najlepszy algorytm dla danych rosnących &  \\ \hline
-    3. & Najlepszy algorytm dla danych malejących &  \\ \hline \hline
-    4. & Najgorszy algorytm dla danych losowych &  \\ \hline
-    5. & Najgorszy algorytm dla danych rosnących &  \\ \hline
-    6. & Najgorszy algorytm dla danych malejących &  \\ \hline
+    1. & Najlepszy algorytm dla danych losowych & QuickSortIterativeWithInSort \\ \hline
+    2. & Najlepszy algorytm dla danych rosnących & InsertionSort \\ \hline
+    3. & Najlepszy algorytm dla danych malejących & InsertionSort \\ \hline \hline
+    4. & Najgorszy algorytm dla danych losowych & InsertionSort, SelectionSort \\ \hline
+    5. & Najgorszy algorytm dla danych rosnących & SelectionSort \\ \hline
+    6. & Najgorszy algorytm dla danych malejących & SelectionSort \\ \hline
     \end{tabular}
 \end{table}
 
@@ -345,21 +345,21 @@ wykres będzie bardziej ,,estetyczny'' (dokładniejszy).
     
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics[height=4.5cm]{example-image-a}
+        \includegraphics[height=4.5cm]{../performance_graphs/random.png}
         \caption{Czas sortowania dla danych losowych.}
         \label{fig:sorters_random_data}
     \end{subfigure}
     
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics[height=4.5cm]{example-image-b}
+        \includegraphics[height=4.5cm]{../performance_graphs/ascending.png}
         \caption{Czas sortowania dla danych rosnących.}
         \label{fig:sorters_ascending_data}
     \end{subfigure}
     
     \begin{subfigure}[b]{\textwidth}
         \centering
-        \includegraphics[height=4.5cm]{example-image-c}
+        \includegraphics[height=4.5cm]{../performance_graphs/descending.png}
         \caption{Czas sortowania dla danych malejących.}
         \label{fig:sorters_descending_data}
     \end{subfigure}

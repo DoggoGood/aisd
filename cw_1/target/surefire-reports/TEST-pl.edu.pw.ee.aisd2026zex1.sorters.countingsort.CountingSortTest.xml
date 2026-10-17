@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="pl.edu.pw.ee.aisd2026zex1.sorters.countingsort.CountingSortTest" time="0.024" tests="1" errors="0" skipped="0" failures="1" flakes="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="pl.edu.pw.ee.aisd2026zex1.sorters.countingsort.CountingSortTest" time="0.022" tests="1" errors="0" skipped="0" failures="1" flakes="0">
   <properties>
     <property name="java.specification.version" value="27"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,8 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-27-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/doggo/code/aisd/cw_1/target/surefire/surefirebooter-20261014125442472_3.jar /home/doggo/code/aisd/cw_1/target/surefire 2026-10-14T12-54-41_739-jvmRun1 surefire-20261014125442472_1tmp surefire_0-20261014125442472_2tmp"/>
+    <property name="sun.java.command" value="/home/doggo/code/aisd/cw_1/target/surefire/surefirebooter-20261016195106568_3.jar /home/doggo/code/aisd/cw_1/target/surefire 2026-10-16T19-51-06_539-jvmRun1 surefire-20261016195106568_1tmp surefire_0-20261016195106568_2tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="!*Performance*"/>
     <property name="surefire.test.class.path" value="/home/doggo/code/aisd/cw_1/target/test-classes:/home/doggo/code/aisd/cw_1/target/classes:/home/doggo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.0/junit-jupiter-engine-6.0.0.jar:/home/doggo/.m2/repository/org/junit/platform/junit-platform-engine/6.0.0/junit-platform-engine-6.0.0.jar:/home/doggo/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/doggo/.m2/repository/org/junit/platform/junit-platform-commons/6.0.0/junit-platform-commons-6.0.0.jar:/home/doggo/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.0/junit-jupiter-api-6.0.0.jar:/home/doggo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/doggo/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/doggo/.m2/repository/org/assertj/assertj-core/4.0.0-M1/assertj-core-4.0.0-M1.jar:/home/doggo/.m2/repository/net/bytebuddy/byte-buddy/1.17.1/byte-buddy-1.17.1.jar"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/doggo"/>
@@ -27,13 +28,13 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/doggo/code/aisd/cw_1/target/surefire/surefirebooter-20261014125442472_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/doggo/code/aisd/cw_1/target/surefire/surefirebooter-20261016195106568_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="27"/>
     <property name="user.name" value="doggo"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="7.2.9-2-cachyos"/>
+    <property name="os.version" value="7.2.10-1-cachyos"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
@@ -54,7 +55,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="71.0"/>
   </properties>
-  <testcase name="should_ThrowException_When_InputIsNull" classname="pl.edu.pw.ee.aisd2026zex1.sorters.countingsort.CountingSortTest" time="0.017">
+  <testcase name="should_ThrowException_When_InputIsNull" classname="pl.edu.pw.ee.aisd2026zex1.sorters.countingsort.CountingSortTest" time="0.016">
     <failure message="TODO: I need your help implementing tests." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: TODO: I need your help implementing tests.
 	at pl.edu.pw.ee.aisd2026zex1.sorters.utils.GeneralSortPrimitiveIntTest.should_ThrowException_When_InputIsNull(GeneralSortPrimitiveIntTest.java:17)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:583)

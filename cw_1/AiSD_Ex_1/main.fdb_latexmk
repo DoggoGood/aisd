@@ -1,5 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1791972790.75012 "main.tex" "main.pdf" "main" 1791972790.99247 2
+["pdflatex"] 1792246535.41408 "main.tex" "main.pdf" "main" 1792246535.99403 2
+  "../performance_graphs/ascending.png" 1792174392.53191 231175 b9c401c4c5b4094f6d5efa022668c39e ""
+  "../performance_graphs/descending.png" 1792174392.67291 235321 d108822a6336f55e1e63777ca63b73d0 ""
+  "../performance_graphs/random.png" 1792174392.7999 273626 3155105746a62a2d1390b5eeba82651f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1775415801 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plmi.enc" 1775415801 2005 f094775651a1386335c158fb632529f1 ""
@@ -76,10 +79,6 @@
   "/usr/share/texmf-dist/tex/latex/multirow/multirow.sty" 1775415801 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
   "/usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf" 1775415801 12160 f5a33a472bc2acb8800c3e00764d8ad1 ""
   "/usr/share/texmf-dist/tex/latex/mwe/example-image-a.tex" 1775415801 466 d1a94627f2e1cbf8876e228d48d436ec ""
-  "/usr/share/texmf-dist/tex/latex/mwe/example-image-b.pdf" 1775415801 17201 df559bd1afe49e7edc5b8a552f742861 ""
-  "/usr/share/texmf-dist/tex/latex/mwe/example-image-b.tex" 1775415801 466 69705384919c6dc961bf49b977dd41f4 ""
-  "/usr/share/texmf-dist/tex/latex/mwe/example-image-c.pdf" 1775415801 11708 12a29bee40215623b90a40eafa3648e3 ""
-  "/usr/share/texmf-dist/tex/latex/mwe/example-image-c.tex" 1775415801 466 4f25febe81bf5b4e1ee4f206e7a419ba ""
   "/usr/share/texmf-dist/tex/latex/mwe/example-image.pdf" 1775415801 17568 8e23b7d568553840c1e0d1200fbe2c18 ""
   "/usr/share/texmf-dist/tex/latex/mwe/example-image.tex" 1775415801 472 ad3eb26372aefe8d1055d70eab56d506 ""
   "/usr/share/texmf-dist/tex/latex/polski/omlplm.fd" 1775415801 1559 a2e024b0ee8ecaa0d3016537435f2a1c ""
@@ -91,8 +90,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791972761 5391761 abf78329ed836cdeddb87472dffb693d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1791972727 3101950 9c2046fac31f50106e57a2574a7e8583 ""
-  "main.aux" 1791972790.96283 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
-  "main.tex" 1791909594.81576 22321 00dce5256ee470589dbb257959ea4ea1 ""
+  "main.aux" 1792246535.96865 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
+  "main.tex" 1792246533.82132 22487 9d45f8f10084fed4782388e0e21e304f ""
   (generated)
   "main.aux"
   "main.log"
