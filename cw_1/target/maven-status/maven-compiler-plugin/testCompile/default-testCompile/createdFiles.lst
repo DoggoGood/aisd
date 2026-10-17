@@ -5,8 +5,8 @@ pl/edu/pw/ee/aisd2026zex1/sorters/performance/charts/QuickSortPerformanceChartsR
 pl/edu/pw/ee/aisd2026zex1/sorters/insort/InsertionSortTest.class
 pl/edu/pw/ee/aisd2026zex1/sorters/performance/table/PerformanceTest.class
 pl/edu/pw/ee/aisd2026zex1/sorters/heapsort/HeapSortTest.class
-pl/edu/pw/ee/aisd2026zex1/sorters/utils/GeneralSortPrimitiveIntTest.class
 pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeLomutoTest.class
+pl/edu/pw/ee/aisd2026zex1/sorters/utils/GeneralSortPrimitiveIntTest.class
 pl/edu/pw/ee/aisd2026zex1/sorters/performance/table/PerformanceDescDataTest.class
 pl/edu/pw/ee/aisd2026zex1/sorters/mergesort/MergeSortTest.class
 pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/recursive/QuickSortRecursiveLomutoTest.class

@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1792246535.41408 "main.tex" "main.pdf" "main" 1792246535.99403 2
-  "../performance_graphs/ascending.png" 1792174392.53191 231175 b9c401c4c5b4094f6d5efa022668c39e ""
-  "../performance_graphs/descending.png" 1792174392.67291 235321 d108822a6336f55e1e63777ca63b73d0 ""
-  "../performance_graphs/random.png" 1792174392.7999 273626 3155105746a62a2d1390b5eeba82651f ""
+["pdflatex"] 1792249197.01072 "main.tex" "main.pdf" "main" 1792249197.58538 2
+  "../performance_graphs/ascending.png" 1792249067.65238 242807 bc3e33a519f1a887b8bf21e22944ac82 ""
+  "../performance_graphs/descending.png" 1792249067.78938 231493 6e8e8bcfcee39ea3c872aad3103d8fd1 ""
+  "../performance_graphs/random.png" 1792249067.92555 263462 ba619b6b3fc1bb151cc4f5700a563464 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1775415801 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plmi.enc" 1775415801 2005 f094775651a1386335c158fb632529f1 ""
@@ -90,8 +90,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791972761 5391761 abf78329ed836cdeddb87472dffb693d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1791972727 3101950 9c2046fac31f50106e57a2574a7e8583 ""
-  "main.aux" 1792246535.96865 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
-  "main.tex" 1792246533.82132 22487 9d45f8f10084fed4782388e0e21e304f ""
+  "main.aux" 1792249197.56372 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
+  "main.tex" 1792249196.35639 22780 a30005cf58affbf6b86e1fdc043d807a ""
   (generated)
   "main.aux"
   "main.log"

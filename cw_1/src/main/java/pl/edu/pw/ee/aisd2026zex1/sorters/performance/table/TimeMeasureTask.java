@@ -13,7 +13,7 @@ public class TimeMeasureTask<T extends Comparable<T>> implements Runnable {
 
     private final T[] orgDataToSort;
 
-    private long averageTime;
+    private volatile long averageTime;
 
     public TimeMeasureTask(SortingCmp<T> sorter, T[] dataToSort) {
         this.sorter = sorter;
@@ -39,6 +39,10 @@ public class TimeMeasureTask<T extends Comparable<T>> implements Runnable {
     private long measureAvgTimeOfSorting() {
         long[] timeResults = measureTimeInLoop();
 
+        if (timeResults == null) {
+            return -1;
+        }
+
         long avgTime = countAvgWithoutTenOutliers(timeResults);
 
         return avgTime;
@@ -54,6 +58,10 @@ public class TimeMeasureTask<T extends Comparable<T>> implements Runnable {
         long currentResult;
 
         for (int i = 0; i < nOfRepeat; i++) {
+            if (Thread.currentThread().isInterrupted()) {
+                return null;
+            }
+
             System.arraycopy(orgDataToSort, 0, dataToSort, 0, n);
 
             currentResult = measureTimeOfSingleSorting(sorter, dataToSort);

@@ -4,7 +4,7 @@
 [INFO] Building AiSD2026ZEx1 1.0-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
-[INFO] Loaded 24112 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 24122 auto-discovered prefixes for remote repository central (prefixes-central.txt)
 [INFO] 
 [INFO] --- resources:3.5.0:resources (default-resources) @ AiSD2026ZEx1 ---
 [INFO] skip non existing resourceDirectory /home/doggo/code/aisd/cw_1/src/main/resources
@@ -26,106 +26,112 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceDescDataTest
-       InsertionSort |    2048 | 25598,0
-       InsertionSort |    4096 | 46985,0
-       InsertionSort |    8192 | 51505,0
-       InsertionSort |   16384 | 24362,0
-       InsertionSort |   32768 | 49292,0
-       InsertionSort |   65536 | 102060
-       InsertionSort |  131072 | 214367
-       SelectionSort |    2048 | 1,04614e+06
-       SelectionSort |    4096 | 4,20482e+06
-       SelectionSort |    8192 | 1,66890e+07
-paź 16, 2026 8:07:53 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+       InsertionSort |    2048 | 3,29762e+06
+       InsertionSort |    4096 | 1,32433e+07
+paź 17, 2026 4:53:30 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       InsertionSort |    8192 | -1,00000
+paź 17, 2026 4:53:35 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       InsertionSort |   16384 | -1,00000
+paź 17, 2026 4:53:40 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       InsertionSort |   32768 | -1,00000
+paź 17, 2026 4:53:46 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       InsertionSort |   65536 | -1,00000
+paź 17, 2026 4:53:53 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+       InsertionSort |  131072 | -1,00000
+       SelectionSort |    2048 | 1,38697e+06
+       SelectionSort |    4096 | 5,60427e+06
+       SelectionSort |    8192 | 2,25245e+07
+paź 17, 2026 4:54:11 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
        SelectionSort |   16384 | -1,00000
-paź 16, 2026 8:07:58 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:54:16 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
        SelectionSort |   32768 | -1,00000
-paź 16, 2026 8:08:03 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:54:21 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
        SelectionSort |   65536 | -1,00000
-paź 16, 2026 8:08:08 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:54:27 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
        SelectionSort |  131072 | -1,00000
-QuickSortRecursiveHoare |    2048 | 1,23535e+06
-QuickSortRecursiveHoare |    4096 | 4,90952e+06
-QuickSortRecursiveHoare |    8192 | 1,95775e+07
-paź 16, 2026 8:08:16 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
-WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
+QuickSortRecursiveHoare |    2048 | 1,18051e+06
+QuickSortRecursiveHoare |    4096 | 4,70265e+06
+QuickSortRecursiveHoare |    8192 | 1,88590e+07
+paź 17, 2026 4:54:30 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+SEVERE: Caught StackOverflow!
 QuickSortRecursiveHoare |   16384 | -1,00000
-paź 16, 2026 8:08:16 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+paź 17, 2026 4:54:30 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
 SEVERE: Caught StackOverflow!
 QuickSortRecursiveHoare |   32768 | -1,00000
-paź 16, 2026 8:08:17 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+paź 17, 2026 4:54:31 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
 SEVERE: Caught StackOverflow!
 QuickSortRecursiveHoare |   65536 | -1,00000
-paź 16, 2026 8:08:18 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
+paź 17, 2026 4:54:31 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest logSevere
 SEVERE: Caught StackOverflow!
 QuickSortRecursiveHoare |  131072 | -1,00000
-QuickSortIterativeHoare |    2048 | 1,33512e+06
-QuickSortIterativeHoare |    4096 | 6,48427e+06
-QuickSortIterativeHoare |    8192 | 2,57962e+07
-paź 16, 2026 8:08:27 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+QuickSortIterativeHoare |    2048 | 1,41452e+06
+QuickSortIterativeHoare |    4096 | 5,49116e+06
+QuickSortIterativeHoare |    8192 | 2,26669e+07
+paź 17, 2026 4:54:39 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeHoare |   16384 | -1,00000
-paź 16, 2026 8:08:32 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:54:45 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeHoare |   32768 | -1,00000
-paź 16, 2026 8:08:37 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:54:50 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeHoare |   65536 | -1,00000
-paź 16, 2026 8:08:42 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:54:55 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeHoare |  131072 | -1,00000
-QuickSortIterativeRandom |    2048 | 198993
-QuickSortIterativeRandom |    4096 | 240335
-QuickSortIterativeRandom |    8192 | 381848
-QuickSortIterativeRandom |   16384 | 780317
-QuickSortIterativeRandom |   32768 | 1,62740e+06
-QuickSortIterativeRandom |   65536 | 3,29779e+06
-QuickSortIterativeRandom |  131072 | 6,86477e+06
-QuickSortIterativeWithInSort |    2048 | 1,40729e+06
-QuickSortIterativeWithInSort |    4096 | 1,12341e+07
-QuickSortIterativeWithInSort |    8192 | 4,60694e+07
-paź 16, 2026 8:08:54 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+QuickSortIterativeRandom |    2048 | 126025
+QuickSortIterativeRandom |    4096 | 275043
+QuickSortIterativeRandom |    8192 | 360295
+QuickSortIterativeRandom |   16384 | 727673
+QuickSortIterativeRandom |   32768 | 1,47752e+06
+QuickSortIterativeRandom |   65536 | 3,01970e+06
+QuickSortIterativeRandom |  131072 | 6,17018e+06
+QuickSortIterativeWithInSort |    2048 | 1,70511e+06
+QuickSortIterativeWithInSort |    4096 | 5,53508e+06
+QuickSortIterativeWithInSort |    8192 | 2,20023e+07
+paź 17, 2026 4:55:05 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeWithInSort |   16384 | -1,00000
-paź 16, 2026 8:08:59 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:55:11 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeWithInSort |   32768 | -1,00000
-paź 16, 2026 8:09:04 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:55:16 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeWithInSort |   65536 | -1,00000
-paź 16, 2026 8:09:09 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
+paź 17, 2026 4:55:21 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
 WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
 QuickSortIterativeWithInSort |  131072 | -1,00000
-QuickSortIterativeMedian3 |    2048 | 216301
-QuickSortIterativeMedian3 |    4096 | 274824
-QuickSortIterativeMedian3 |    8192 | 203097
-QuickSortIterativeMedian3 |   16384 | 485417
-QuickSortIterativeMedian3 |   32768 | 894340
-QuickSortIterativeMedian3 |   65536 | 1,80009e+06
-QuickSortIterativeMedian3 |  131072 | 3,77167e+06
-           MergeSort |    2048 | 410853
-           MergeSort |    4096 | 356471
-           MergeSort |    8192 | 2,65875e+06
-           MergeSort |   16384 | 1,01337e+07
-           MergeSort |   32768 | 3,92467e+07
-paź 16, 2026 8:09:20 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
-WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
-           MergeSort |   65536 | -1,00000
-paź 16, 2026 8:09:25 PM pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceTest measureAvgTimeAndStopAfterDuration
-WARNING: A TIMEOUT interrupt was caught during average time measurement: java.util.concurrent.TimeoutException
-           MergeSort |  131072 | -1,00000
-            HeapSort |    2048 | 340889
-            HeapSort |    4096 | 547578
-            HeapSort |    8192 | 1,22760e+06
-            HeapSort |   16384 | 2,59216e+06
-            HeapSort |   32768 | 5,49912e+06
-            HeapSort |   65536 | 1,14666e+07
-            HeapSort |  131072 | 1,67806e+07
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 102.9 s -- in pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceDescDataTest
+QuickSortIterativeMedian3 |    2048 | 100637
+QuickSortIterativeMedian3 |    4096 | 239997
+QuickSortIterativeMedian3 |    8192 | 294871
+QuickSortIterativeMedian3 |   16384 | 619584
+QuickSortIterativeMedian3 |   32768 | 1,33655e+06
+QuickSortIterativeMedian3 |   65536 | 2,72367e+06
+QuickSortIterativeMedian3 |  131072 | 5,71444e+06
+           MergeSort |    2048 | 108168
+           MergeSort |    4096 | 106608
+           MergeSort |    8192 | 227205
+           MergeSort |   16384 | 497718
+           MergeSort |   32768 | 1,01947e+06
+           MergeSort |   65536 | 2,17239e+06
+           MergeSort |  131072 | 4,87645e+06
+            HeapSort |    2048 | 148003
+            HeapSort |    4096 | 346237
+            HeapSort |    8192 | 762168
+            HeapSort |   16384 | 1,55298e+06
+            HeapSort |   32768 | 3,22536e+06
+            HeapSort |   65536 | 6,98093e+06
+            HeapSort |  131072 | 1,40960e+07
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 123.3 s -- in pl.edu.pw.ee.aisd2026zex1.sorters.performance.table.PerformanceDescDataTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -134,6 +140,6 @@ WARNING: A TIMEOUT interrupt was caught during average time measurement: java.ut
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:43 min
-[INFO] Finished at: 2026-10-16T20:09:29+02:00
+[INFO] Total time:  02:04 min
+[INFO] Finished at: 2026-10-17T16:55:27+02:00
 [INFO] ------------------------------------------------------------------------

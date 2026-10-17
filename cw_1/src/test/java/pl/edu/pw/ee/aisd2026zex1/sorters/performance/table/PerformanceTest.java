@@ -70,12 +70,23 @@ public abstract class PerformanceTest<T extends Comparable<T>> {
         int n = dataSizes.length;
 
         for (SortingCmp<T> sorter : sorters) {
+            warmUp(sorter);
             for (int size : dataSizes) {
 
                 T[] dataToSort = generateData(size);
 
                 measureTimeAndPrintResultsOfSorting(sorter, dataToSort);
             }
+        }
+    }
+
+    private void warmUp(SortingCmp<T> sorter) {
+        T[] org = generateData(2048);
+        T[] copy = (T[]) new Comparable[org.length];
+
+        for (int i = 0; i < 50; i++) {
+            System.arraycopy(org, 0, copy, 0, org.length);
+            sorter.sort(copy);
         }
     }
 
@@ -117,6 +128,15 @@ public abstract class PerformanceTest<T extends Comparable<T>> {
 
         } finally {
             executor.shutdown();
+            try {
+                if (!executor.awaitTermination(30, TimeUnit.SECONDS)) {
+                    LOG.log(WARNING, "Executor did not terminate in the specified time.");
+                }
+            }
+            catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+
+            }
         }
 
         double result = timeMeasureTask.getAverageTime();

@@ -327,13 +327,18 @@ Zadanie dla chętnych: zamiast wspomnianego pakietu, proszę wykorzystać pakiet
 Trzeba w nim wprowadzić trochę zmian, aby nie było konieczności tworzenia kilkudziesięciu klas, ale dzięki temu
 wykres będzie bardziej ,,estetyczny'' (dokładniejszy).
 
+W pomiarach, dla których algorytm przekroczył limit czasu, wynik oznaczony jako
+\verb|-1| pominięto. Ocena najlepszego i najgorszego algorytmu została wykonana
+na podstawie poprawnych pomiarów dla największych rozmiarów danych, dla których
+porównywane algorytmy zakończyły działanie.
+
 \begin{table}[h]
     \begin{tabular}{|l|l|l|}
     \hline
     Lp. & Kategoria & \begin{tabular}[c]{@{}l@{}}Algorytm\\ (lub algorytmy)\end{tabular} \\ \hline
     1. & Najlepszy algorytm dla danych losowych & QuickSortIterativeWithInSort \\ \hline
     2. & Najlepszy algorytm dla danych rosnących & InsertionSort \\ \hline
-    3. & Najlepszy algorytm dla danych malejących & InsertionSort \\ \hline \hline
+    3. & Najlepszy algorytm dla danych malejących & MergeSort \\ \hline \hline
     4. & Najgorszy algorytm dla danych losowych & InsertionSort, SelectionSort \\ \hline
     5. & Najgorszy algorytm dla danych rosnących & SelectionSort \\ \hline
     6. & Najgorszy algorytm dla danych malejących & SelectionSort \\ \hline

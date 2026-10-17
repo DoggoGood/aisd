@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.14)  17 OCT 2026 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.14)  17 OCT 2026 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -345,24 +345,24 @@ Overfull \hbox (10.44275pt too wide) in paragraph at lines 308--312
  []
 
 [6]
-Overfull \hbox (24.94525pt too wide) in paragraph at lines 331--341
+Overfull \hbox (24.94525pt too wide) in paragraph at lines 336--346
 [][] 
  []
 
 <../performance_graphs/random.png, id=32, 794.97pt x 505.89pt>
 File: ../performance_graphs/random.png Graphic file (type png)
 <use ../performance_graphs/random.png>
-Package pdftex.def Info: ../performance_graphs/random.png  used on input line 348.
+Package pdftex.def Info: ../performance_graphs/random.png  used on input line 353.
 (pdftex.def)             Requested size: 201.20445pt x 128.0374pt.
 <../performance_graphs/ascending.png, id=34, 794.97pt x 505.89pt>
 File: ../performance_graphs/ascending.png Graphic file (type png)
 <use ../performance_graphs/ascending.png>
-Package pdftex.def Info: ../performance_graphs/ascending.png  used on input line 355.
+Package pdftex.def Info: ../performance_graphs/ascending.png  used on input line 360.
 (pdftex.def)             Requested size: 201.20445pt x 128.0374pt.
 <../performance_graphs/descending.png, id=35, 794.97pt x 505.89pt>
 File: ../performance_graphs/descending.png Graphic file (type png)
 <use ../performance_graphs/descending.png>
-Package pdftex.def Info: ../performance_graphs/descending.png  used on input line 362.
+Package pdftex.def Info: ../performance_graphs/descending.png  used on input line 367.
 (pdftex.def)             Requested size: 201.20445pt x 128.0374pt.
 [7]
 Overfull \vbox (1.57051pt too high) has occurred while \output is active []
@@ -371,13 +371,13 @@ Overfull \vbox (1.57051pt too high) has occurred while \output is active []
 <example-image-a.pdf, id=53, 321.2pt x 240.9pt>
 File: example-image-a.pdf Graphic file (type pdf)
 <use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 424.
+Package pdftex.def Info: example-image-a.pdf  used on input line 429.
 (pdftex.def)             Requested size: 345.0pt x 258.75659pt.
  [11 </usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf>] [12]
 <example-image.pdf, id=66, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 454.
+Package pdftex.def Info: example-image.pdf  used on input line 459.
 (pdftex.def)             Requested size: 345.0pt x 258.75659pt.
  [13 </usr/share/texmf-dist/tex/latex/mwe/example-image.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -396,7 +396,7 @@ Here is how much of TeX's memory you used:
  34 hyphenation exceptions out of 8191
  67i,15n,77p,432b,1946s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (13 pages, 764138 bytes).
+Output written on main.pdf (13 pages, 778497 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
