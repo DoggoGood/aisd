@@ -152,12 +152,11 @@ INPUT ../performance_graphs/descending.png
 INPUT ../performance_graphs/descending.png
 INPUT ../performance_graphs/descending.png
 INPUT ../performance_graphs/descending.png
-INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image-a.tex
-INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image-a.tex
-INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf
-INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf
-INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf
-INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf
+INPUT ../QuickSortInsertionCutoff.png
+INPUT ../QuickSortInsertionCutoff.png
+INPUT ../QuickSortInsertionCutoff.png
+INPUT ../QuickSortInsertionCutoff.png
+INPUT ../QuickSortInsertionCutoff.png
 INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image.tex
 INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image.tex
 INPUT /usr/share/texmf-dist/tex/latex/mwe/example-image.pdf

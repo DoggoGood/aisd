@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.14)  17 OCT 2026 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.14)  18 OCT 2026 13:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -349,35 +349,32 @@ Overfull \hbox (24.94525pt too wide) in paragraph at lines 336--346
 [][] 
  []
 
-<../performance_graphs/random.png, id=32, 794.97pt x 505.89pt>
+<../performance_graphs/random.png, id=32, 875.55106pt x 478.06606pt>
 File: ../performance_graphs/random.png Graphic file (type png)
 <use ../performance_graphs/random.png>
 Package pdftex.def Info: ../performance_graphs/random.png  used on input line 353.
-(pdftex.def)             Requested size: 201.20445pt x 128.0374pt.
-<../performance_graphs/ascending.png, id=34, 794.97pt x 505.89pt>
+(pdftex.def)             Requested size: 234.49149pt x 128.0374pt.
+<../performance_graphs/ascending.png, id=34, 875.55106pt x 478.06606pt>
 File: ../performance_graphs/ascending.png Graphic file (type png)
 <use ../performance_graphs/ascending.png>
 Package pdftex.def Info: ../performance_graphs/ascending.png  used on input line 360.
-(pdftex.def)             Requested size: 201.20445pt x 128.0374pt.
-<../performance_graphs/descending.png, id=35, 794.97pt x 505.89pt>
+(pdftex.def)             Requested size: 234.49149pt x 128.0374pt.
+<../performance_graphs/descending.png, id=35, 875.55106pt x 478.06606pt>
 File: ../performance_graphs/descending.png Graphic file (type png)
 <use ../performance_graphs/descending.png>
 Package pdftex.def Info: ../performance_graphs/descending.png  used on input line 367.
-(pdftex.def)             Requested size: 201.20445pt x 128.0374pt.
-[7]
-Overfull \vbox (1.57051pt too high) has occurred while \output is active []
-
- [8 <../performance_graphs/random.png> <../performance_graphs/ascending.png> <../performance_graphs/descending.png>] [9] [10]
-<example-image-a.pdf, id=53, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 429.
-(pdftex.def)             Requested size: 345.0pt x 258.75659pt.
- [11 </usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf>] [12]
-<example-image.pdf, id=66, 321.2pt x 240.9pt>
+(pdftex.def)             Requested size: 234.49149pt x 128.0374pt.
+[7] [8 <../performance_graphs/random.png> <../performance_graphs/ascending.png> <../performance_graphs/descending.png>] [9] [10]
+<../QuickSortInsertionCutoff.png, id=53, 406.8801pt x 327.74445pt>
+File: ../QuickSortInsertionCutoff.png Graphic file (type png)
+<use ../QuickSortInsertionCutoff.png>
+Package pdftex.def Info: ../QuickSortInsertionCutoff.png  used on input line 429.
+(pdftex.def)             Requested size: 345.0pt x 277.89896pt.
+ [11 <../QuickSortInsertionCutoff.png>] [12]
+<example-image.pdf, id=61, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 459.
+Package pdftex.def Info: example-image.pdf  used on input line 458.
 (pdftex.def)             Requested size: 345.0pt x 258.75659pt.
  [13 </usr/share/texmf-dist/tex/latex/mwe/example-image.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -388,18 +385,18 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5767 strings out of 469480
- 94868 string characters out of 5470002
+ 5762 strings out of 469480
+ 94791 string characters out of 5470002
  711419 words of memory out of 5000000
- 34351 multiletter control sequences out of 15000+600000
+ 34346 multiletter control sequences out of 15000+600000
  635874 words of font info for 60 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  67i,15n,77p,432b,1946s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (13 pages, 778497 bytes).
+Output written on main.pdf (13 pages, 829041 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

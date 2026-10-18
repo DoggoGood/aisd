@@ -11,6 +11,7 @@
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/performance/table/PerformanceDescDataTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/performance/table/PerformanceRandDataTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/performance/table/PerformanceTest.java
+/home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/performance/table/QuickSortInsertionCutoffTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeHoareTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/QuickSortIterativeLomutoTest.java
 /home/doggo/code/aisd/cw_1/src/test/java/pl/edu/pw/ee/aisd2026zex1/sorters/quicksort/iterative/improvements/QuickSortIterativeMedian3Test.java

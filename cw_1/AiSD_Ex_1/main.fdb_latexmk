@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1792249197.01072 "main.tex" "main.pdf" "main" 1792249197.58538 2
-  "../performance_graphs/ascending.png" 1792249067.65238 242807 bc3e33a519f1a887b8bf21e22944ac82 ""
-  "../performance_graphs/descending.png" 1792249067.78938 231493 6e8e8bcfcee39ea3c872aad3103d8fd1 ""
-  "../performance_graphs/random.png" 1792249067.92555 263462 ba619b6b3fc1bb151cc4f5700a563464 ""
+["pdflatex"] 1792322062.62022 "main.tex" "main.pdf" "main" 1792322063.2267 2
+  "../QuickSortInsertionCutoff.png" 1792321469.7318 70680 fd36a1f9cdd7e09bee0cee2e1e9489a8 ""
+  "../performance_graphs/ascending.png" 1792250315.81896 245149 42133627322d0ba618fe799d170b15b5 ""
+  "../performance_graphs/descending.png" 1792250315.98996 224011 a34db307d52b5dbece0652683cf5d620 ""
+  "../performance_graphs/random.png" 1792250316.15396 246847 c503f5e55de107df4e3e62c5aa3afef8 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1775415801 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plmi.enc" 1775415801 2005 f094775651a1386335c158fb632529f1 ""
@@ -77,8 +78,6 @@
   "/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty" 1775415801 77105 002e983b638eadbf04e580642335f689 ""
   "/usr/share/texmf-dist/tex/latex/listings/lstpatch.sty" 1775415801 353 9024412f43e92cd5b21fe9ded82d0610 ""
   "/usr/share/texmf-dist/tex/latex/multirow/multirow.sty" 1775415801 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
-  "/usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf" 1775415801 12160 f5a33a472bc2acb8800c3e00764d8ad1 ""
-  "/usr/share/texmf-dist/tex/latex/mwe/example-image-a.tex" 1775415801 466 d1a94627f2e1cbf8876e228d48d436ec ""
   "/usr/share/texmf-dist/tex/latex/mwe/example-image.pdf" 1775415801 17568 8e23b7d568553840c1e0d1200fbe2c18 ""
   "/usr/share/texmf-dist/tex/latex/mwe/example-image.tex" 1775415801 472 ad3eb26372aefe8d1055d70eab56d506 ""
   "/usr/share/texmf-dist/tex/latex/polski/omlplm.fd" 1775415801 1559 a2e024b0ee8ecaa0d3016537435f2a1c ""
@@ -90,8 +89,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791972761 5391761 abf78329ed836cdeddb87472dffb693d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1791972727 3101950 9c2046fac31f50106e57a2574a7e8583 ""
-  "main.aux" 1792249197.56372 5172 72ee091282dff5873c0ef05b17de1596 "pdflatex"
-  "main.tex" 1792249196.35639 22780 a30005cf58affbf6b86e1fdc043d807a ""
+  "main.aux" 1792322063.20567 5090 3f6977fd692436eb27620b1e4b6fd9c7 "pdflatex"
+  "main.tex" 1792322061.37213 22906 f4b4013cf1bd32a25aa23fdb647f8dee ""
   (generated)
   "main.aux"
   "main.log"

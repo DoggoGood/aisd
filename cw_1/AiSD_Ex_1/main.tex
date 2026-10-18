@@ -339,7 +339,7 @@ porównywane algorytmy zakończyły działanie.
     1. & Najlepszy algorytm dla danych losowych & QuickSortIterativeWithInSort \\ \hline
     2. & Najlepszy algorytm dla danych rosnących & InsertionSort \\ \hline
     3. & Najlepszy algorytm dla danych malejących & MergeSort \\ \hline \hline
-    4. & Najgorszy algorytm dla danych losowych & InsertionSort, SelectionSort \\ \hline
+    4. & Najgorszy algorytm dla danych losowych & InsertionSort \\ \hline
     5. & Najgorszy algorytm dla danych rosnących & SelectionSort \\ \hline
     6. & Najgorszy algorytm dla danych malejących & SelectionSort \\ \hline
     \end{tabular}
@@ -369,7 +369,7 @@ porównywane algorytmy zakończyły działanie.
         \label{fig:sorters_descending_data}
     \end{subfigure}
     
-    \caption{Wykresy pokazują, jak zmienia się czas sortowania w zależności od rozmiaru danych dla algorytmów: sortowania przez wstawianie, sortowania przez wybór, sortowania szybkiego (różne warianty), sortowania przez scalanie, sortowania przez kopcowanie, sortowania referencyjnego.}
+    \caption{Algorytmy: InsertionSort, SelectionSort, QuickSortRecursiveHoare, QuickSortIterativeHoare, QuickSortIterativeRandom, QuickSortIterativeWithInSort, QuickSortIterativeMedian3, MergeSort oraz HeapSort.}
 \end{figure}
 
 \newpage
@@ -426,13 +426,12 @@ Przeprowadzoną analizę proszę zobrazować na wykresie.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{example-image-a}
+    \includegraphics[width=\linewidth]{../QuickSortInsertionCutoff.png}
     \caption{Wykres pokazuje, jak zmienia się czas sortowania tablicy losowo uporządkowanych wartości algorytmem szybkiego sortowania (z dołączonym algorytmem sortowania przez wstawianie), w zależności od wielkości podproblemu, dla którego dołączany jest ten algorytm (sortowania przez wstawianie).}
     \label{fig:qsort_and_insort_optimal_value}
 \end{figure}
 
-Komentarz (a.k.a. wnioski): \textbf{\hl{TODO -----------------------------------------}}.
-
+Komentarz (a.k.a. wnioski): Optymalna wartość rozmiaru podproblemów wynosi coś około 20-30 dla mojego środowiska. Za każdym razem gdy odpalałem testy to wartości otrzymywałem w tym zakresie. Wartość ta może się różnić w zależności od środowiska, w którym wykonywane są testy.
 \newpage
 \subsection{Zadanie 8.}
 
