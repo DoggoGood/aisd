@@ -1,0 +1,15 @@
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/HashListChainingModularHashingTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/performance/PerformanceHashListChainingModularHashingSizePowerOf2Test.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/performance/PerformanceHashListChainingModularHashingSizePrimeNumTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/performance/PerformanceHashListChainingMultiplicativeHashingSizePowerOf2Test.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/performance/PerformanceHashListChainingMultiplicativeHashingSizePrimeNumTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/performance/PerformanceTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/performance/utils/HashSizeGenerator.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/stats/ChainLengthStatsModularHashingTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/stats/ChainLengthStatsMultiplicativeHashingTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/stats/ChainLengthStatsTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/utils/AdvancedConstructors.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/utils/AdvancedGetters.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/utils/DataReader.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/utils/GeneralHashListChainingTest.java
+/home/doggo/code/stud/aisd/cw_2/AiSD2026ZEx2/src/test/java/pl/edu/pw/ee/aisd2026zex2/utils/HashDataTestUtils.java
