@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pl.edu.pw.ee.aisd2026zex2.stats.ChainLengthStatsMultiplicativeHashingTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.450 s -- in pl.edu.pw.ee.aisd2026zex2.stats.ChainLengthStatsMultiplicativeHashingTest

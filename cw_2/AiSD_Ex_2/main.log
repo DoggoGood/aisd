@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.11)  19 OCT 2026 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.10.20)  24 OCT 2026 15:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -292,7 +292,37 @@ File: images/2_hash_linear_probing.png Graphic file (type png)
 <use images/2_hash_linear_probing.png>
 Package pdftex.def Info: images/2_hash_linear_probing.png  used on input line 167.
 (pdftex.def)             Requested size: 482.9979pt x 269.87042pt.
- [3] [4 <./images/2_hash_linear_probing.png>] [5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plme.enc}] [6] [7] [8] [9] [10] 
+ [3] [4 <./images/2_hash_linear_probing.png>] [5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/pl/plme.enc}] [6] [7]
+<images/task2_modular_5101.png, id=42, 578.16pt x 325.215pt>
+File: images/task2_modular_5101.png Graphic file (type png)
+<use images/task2_modular_5101.png>
+Package pdftex.def Info: images/task2_modular_5101.png  used on input line 328.
+(pdftex.def)             Requested size: 165.59853pt x 93.14873pt.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <9> on input line 329.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 329.
+<images/task2_modular_2097169.png, id=43, 578.16pt x 325.215pt>
+File: images/task2_modular_2097169.png Graphic file (type png)
+<use images/task2_modular_2097169.png>
+Package pdftex.def Info: images/task2_modular_2097169.png  used on input line 334.
+(pdftex.def)             Requested size: 165.59853pt x 93.14873pt.
+<images/task2_multiplicative_5101.png, id=44, 578.16pt x 325.215pt>
+File: images/task2_multiplicative_5101.png Graphic file (type png)
+<use images/task2_multiplicative_5101.png>
+Package pdftex.def Info: images/task2_multiplicative_5101.png  used on input line 340.
+(pdftex.def)             Requested size: 165.59853pt x 93.14873pt.
+<images/task2_multiplicative_2097169.png, id=45, 578.16pt x 325.215pt>
+File: images/task2_multiplicative_2097169.png Graphic file (type png)
+<use images/task2_multiplicative_2097169.png>
+Package pdftex.def Info: images/task2_multiplicative_2097169.png  used on input line 346.
+(pdftex.def)             Requested size: 165.59853pt x 93.14873pt.
+ [8 <./images/task2_modular_5101.png> <./images/task2_modular_2097169.png> <./images/task2_multiplicative_5101.png> <./images/task2_multiplicative_2097169.png>]
+Overfull \hbox (11.36223pt too wide) in paragraph at lines 367--394
+[][] 
+ []
+
+[9] [10] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -301,18 +331,18 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5721 strings out of 469480
- 95702 string characters out of 5470002
- 510471 words of memory out of 5000000
- 34310 multiletter control sequences out of 15000+600000
- 635378 words of font info for 59 fonts, out of 8000000 for 9000
+ 5773 strings out of 469480
+ 97214 string characters out of 5470002
+ 510496 words of memory out of 5000000
+ 34356 multiletter control sequences out of 15000+600000
+ 637687 words of font info for 65 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 67i,15n,77p,438b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (10 pages, 351157 bytes).
+ 67i,15n,77p,438b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plex10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plmi9.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plr9.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/share/texmf-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (10 pages, 519668 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

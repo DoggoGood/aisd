@@ -23,10 +23,10 @@ public class HashSizeGenerator {
             32909,
             65651,
             131111,
-            263023,
-            524309,
-            1048583,
-            2097169
+            263023
+            // 524309,
+            // 1048583,
+            // 2097169
         };
 
         assert hashSizes.length == nVariants;

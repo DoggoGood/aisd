@@ -12,7 +12,7 @@
 
 
 \title{AiSD Ex. 2 (Pon.)}
-\author{\hl{Imię i Nazwisko}}
+\author{\hl{Mateusz Kamieniecki}}
 \date{\today}
 
 \lstset{
@@ -273,17 +273,17 @@ od rozmiaru tablicy mieszającej.
 \begin{table}[ht]
 \begin{tabular}{|l|l|l|l|}
 \hline
-Lp. & Rozmiar  & Zmierzony czas [\hl{???}] & Wsp. zapełnienia $\alpha$ \\ \hline
-1.  & 4096     &                           &                           \\ \hline
-2.  & 8192     &                           &                           \\ \hline
-3.  & 16384    &                           &                           \\ \hline
-4.  & 32768    &                           &                           \\ \hline
-5.  & 65536    &                           &                           \\ \hline
-6.  & 131072   &                           &                           \\ \hline
-7.  & 262144   &                           &                           \\ \hline
-8.  & 524288   &                           &                           \\ \hline
-9.  & 1048576  &                           &                           \\ \hline
-10. & 2097152  &                           &                           \\ \hline
+Lp. & Rozmiar  & Zmierzony czas [ns] & Wsp. zapełnienia $\alpha$ \\ \hline
+1.  & 4096     & 14042204 & 24.4141 \\ \hline
+2.  & 8192     & 7526955  & 12.2070 \\ \hline
+3.  & 16384    & 4558155  & 6.1035  \\ \hline
+4.  & 32768    & 2904204  & 3.0518  \\ \hline
+5.  & 65536    & 2003399  & 1.5259  \\ \hline
+6.  & 131072   & 1358411  & 0.7629  \\ \hline
+7.  & 262144   & 948468   & 0.3815  \\ \hline
+8.  & 524288   & 764429   & 0.1907  \\ \hline
+9.  & 1048576  & 664816   & 0.0954  \\ \hline
+10. & 2097152  & 651203   & 0.0477  \\ \hline
 \end{tabular}
 \caption{Tabela prezentuje czas wyszukania wszystkich elementów w tabeli mieszającej (z haszowaniem 
 modularnym) o rozmiarze będącym potęgą liczby~2.}
@@ -293,24 +293,26 @@ modularnym) o rozmiarze będącym potęgą liczby~2.}
 \begin{table}[h]
 \begin{tabular}{|l|l|l|l|}
 \hline
-Lp. & Rozmiar  & Zmierzony czas [\hl{???}] & Wsp. zapełnienia $\alpha$ \\ \hline
-1.  & 5101     &                           &                           \\ \hline
-2.  & 8297     &                           &                           \\ \hline
-3.  & 16493    &                           &                           \\ \hline
-4.  & 32909    &                           &                           \\ \hline
-5.  & 65651    &                           &                           \\ \hline
-6.  & 131111   &                           &                           \\ \hline
-7.  & 263023   &                           &                           \\ \hline
-8.  & 524309   &                           &                           \\ \hline
-9.  & 1048583  &                           &                           \\ \hline
-10. & 2097169  &                           &                           \\ \hline
+Lp. & Rozmiar  & Zmierzony czas [ns] & Wsp. zapełnienia $\alpha$ \\ \hline
+1.  & 5101     & 11660556 & 19.6040 \\ \hline
+2.  & 8297     & 7415285  & 12.0525 \\ \hline
+3.  & 16493    & 4467328  & 6.0638  \\ \hline
+4.  & 32909    & 2822505  & 3.0384  \\ \hline
+5.  & 65651    & 1964488  & 1.5232  \\ \hline
+6.  & 131111   & 1360301  & 0.7627  \\ \hline
+7.  & 263023   & 949450   & 0.3802  \\ \hline
+8.  & 524309   & 773734   & 0.1907  \\ \hline
+9.  & 1048583  & 681620   & 0.0954  \\ \hline
+10. & 2097169  & 630726   & 0.0477  \\ \hline
 \end{tabular}
 \caption{Tabela prezentuje czas wyszukania wszystkich elementów w tabeli mieszającej (z haszowaniem
 modularnym) o rozmiarze będącym liczbą pierwszą.}
 \label{Tab:hash-size-primes}
 \end{table}
 
-\noindent \textbf{Komentarz (a.k.a. wnioski):} \hl{TODO ------------------}.
+\noindent \textbf{Komentarz (a.k.a. wnioski):}
+Czas wyszykiwania elementów maleje, kiedy współczynnik zapelnienia też maleje.
+Wynika to z mniejszej szansy na kolizję oraz krótszych łańuchów.
 
 \newpage 
 
@@ -319,7 +321,37 @@ Proszę przygotować wykresy (histogramy) pokazującr, ile jest łańcuchów pos
 
 Miejsce na wykresy (4 histogramy) proszę przygotować sobie samodzielnie.
 
-\noindent \textbf{Komentarz (a.k.a. wnioski):} \hl{TODO ------------------}.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/task2_modular_5101.png}
+        \caption{Modularne, $m=5101$.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/task2_modular_2097169.png}
+        \caption{Modularne, $m=2097169$.}
+    \end{subfigure}
+
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/task2_multiplicative_5101.png}
+        \caption{Przez mnożenie, $m=5101$.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/task2_multiplicative_2097169.png}
+        \caption{Przez mnożenie, $m=2097169$.}
+    \end{subfigure}
+    \caption{Liczba łańcuchów w zależności od ich długości.}
+    \label{fig:task2-chain-lengths}
+\end{figure}
+
+\noindent \textbf{Komentarz (a.k.a. wnioski): }
+Dla rozmiaru 5101 współczynnik zapełnienia jest większy, więc łańcuchy są dłuższe. Dla rozmiaru 2097169 większość łańcuchów ma długość 0, czyli są puste. Oba funkcje haszujące dają podobne wyniki.
 
 \newpage 
 
@@ -336,7 +368,7 @@ wartości stałej $A$. Proszę skomentować uzyskane wyniki.
 \hline
 \multirow{3}{*}{Lp.} &
   \multirow{3}{*}{Rozmiar} &
-  \multicolumn{4}{c|}{Zmierzony czas [\hl{???}]} &
+  \multicolumn{4}{c|}{Zmierzony czas [ns]} &
   \multicolumn{1}{l|}{\multirow{3}{*}{$\alpha$}} \\ \cline{3-6}
  &
    &
@@ -346,23 +378,24 @@ wartości stałej $A$. Proszę skomentować uzyskane wyniki.
  &
    &
   \multicolumn{1}{l|}{} &
-  \multicolumn{1}{l|}{$A=\frac{\sqrt{5}-1}{2})$} &
-  \multicolumn{1}{l|}{\hl{$A=??$}} &
-  \hl{$A=??$} &
+  \multicolumn{1}{l|}{$A=\frac{\sqrt{5}-1}{2}$} &
+  \multicolumn{1}{l|}{$A=0.5$} &
+  \multicolumn{1}{l|}{$A=\pi-3$} &
   \multicolumn{1}{l|}{} \\ \hline
-1. & 5101   & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 19.60 \\ \hline
-2. & 8297   & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 12.05 \\ \hline
-3. & 16493  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 6.06  \\ \hline
-4. & 32909  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 3.04  \\ \hline
-5. & 65651  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 1.52  \\ \hline
-6. & 131111 & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 0.76  \\ \hline
-7. & 263023 & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  & 0.38  \\ \hline
+1. & 5101   & \multicolumn{1}{l|}{12377492} & \multicolumn{1}{l|}{12736097} & \multicolumn{1}{l|}{3511986648} & \multicolumn{1}{l|}{12665778} & 19.60 \\ \hline
+2. & 8297   & \multicolumn{1}{l|}{7886148}  & \multicolumn{1}{l|}{8207782}  & \multicolumn{1}{l|}{6051225161} & \multicolumn{1}{l|}{8183160} & 12.05 \\ \hline
+3. & 16493  & \multicolumn{1}{l|}{4679930}  & \multicolumn{1}{l|}{4983189}  & \multicolumn{1}{l|}{6037727999} & \multicolumn{1}{l|}{4986535} & 6.06  \\ \hline
+4. & 32909  & \multicolumn{1}{l|}{2896459}  & \multicolumn{1}{l|}{3167319}  & \multicolumn{1}{l|}{6055448284} & \multicolumn{1}{l|}{3156599} & 3.04  \\ \hline
+5. & 65651  & \multicolumn{1}{l|}{2038385}  & \multicolumn{1}{l|}{2190818}  & \multicolumn{1}{l|}{6053701646} & \multicolumn{1}{l|}{2189921} & 1.52  \\ \hline
+6. & 131111 & \multicolumn{1}{l|}{1401893}  & \multicolumn{1}{l|}{1535696}  & \multicolumn{1}{l|}{6024877193} & \multicolumn{1}{l|}{1524993} & 0.76  \\ \hline
+7. & 263023 & \multicolumn{1}{l|}{990095}   & \multicolumn{1}{l|}{1076410}  & \multicolumn{1}{l|}{6025884460} & \multicolumn{1}{l|}{1071948} & 0.38  \\ \hline
 \end{tabular}
 \caption{Tabela pokazuje, jak zmienia się czas wyszukania $100\_000$ elementów w tablicy 
 mieszającej w zależności od użytej funkcji mieszającej i rozmiaru tej tablicy.}
 \end{table}
 
-\noindent \textbf{Komentarz (a.k.a. wnioski):} \hl{TODO ------------------}.
+\noindent \textbf{Komentarz (a.k.a. wnioski):}
+Czasy dla wartości A $\frac{\sqrt{5}-1}{2}$ oraz $\pi-3$ są bardzo zbliżone, ponieważ wzięta została liczba niewymierna. Wartości czasowe dla hashowania modularnego są również zbliżone do tych dwóch wartości. Natomiast dla A=0.5 czas jest bardzo duży, ponieważ funkcja haszująca źle rozprasza elementy po tablicy, przez co powstaje dużo kolizji.
 
 \subsection{Zadanie 4*}
 Proszę, wykorzystując gotowe oraz własne testy jednostkowe, zweryfikować poprawność

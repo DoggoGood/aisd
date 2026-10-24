@@ -2,6 +2,10 @@ package pl.edu.pw.ee.aisd2026zex2;
 
 public class HashListChainingMultiplicativeHashing<T extends Comparable<T>> extends HashListChaining<T> {
 
+    // private static final double A = (Math.sqrt(5) - 1) / 2;
+    // private static final double A = 0.5;
+    private static final double A = Math.PI-3;
+
     public HashListChainingMultiplicativeHashing() {
         super();
     }
@@ -12,6 +16,7 @@ public class HashListChainingMultiplicativeHashing<T extends Comparable<T>> exte
 
     @Override
     int countHashId(T value) {
-        throw new UnsupportedOperationException("Not supported yet. TODO!");
+        int hashCode = value.hashCode();
+        return (int) (Math.floor(size * ((hashCode * A)-Math.floor(hashCode * A))));
     }
 }

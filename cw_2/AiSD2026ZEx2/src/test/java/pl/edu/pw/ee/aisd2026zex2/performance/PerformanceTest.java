@@ -20,7 +20,8 @@ abstract class PerformanceTest {
 
     private static final Class DEFAULT_CLASS = HashListChainingModularHashing.class;
 
-    static final int N_VARIANTS = 10;
+    static final int N_VARIANTS = 7;
+    // static final int N_VARIANTS = 10;
     static final int INIT_SIZE = 4096;
 
     private final Class hashListClazz;
@@ -46,7 +47,7 @@ abstract class PerformanceTest {
         System.out.println("Average time for");
 
         System.gc();
-        for (int i = 0; i < N_VARIANTS; i++) {
+        for (int i = 0; i < hashSizes.length; i++) {
             hash = prepareHashWithSizeAndFillIt(hashSizes[i], words);
             averageTime = measureAverageTimeOfGettingWords(words, hash);
 
