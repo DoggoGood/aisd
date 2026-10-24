@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1792847239.13849 "main.tex" "main.pdf" "main" 1792847239.58997 0
+["pdflatex"] 1792869450.63121 "main.tex" "main.pdf" "main" 1792869451.08032 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plit.enc" 1775415801 1946 62ba825cda1ff16dbaa60d53ac60525a ""
   "/usr/share/texmf-dist/fonts/enc/dvips/pl/plme.enc" 1775415801 3126 59f33ff3e396436ebc36f4e7b444d5c4 ""
@@ -94,8 +94,8 @@
   "images/task2_modular_5101.png" 1792844425.05943 41553 f6ebddcd69d708c55228b2f880c6f6f3 ""
   "images/task2_multiplicative_2097169.png" 1792844425.22443 44747 3e89191c5019e6e849e032975a93274b ""
   "images/task2_multiplicative_5101.png" 1792844425.17143 39874 bfe779d0cb8e034687fb87ce5cd7d9eb ""
-  "main.aux" 1792847239.57025 3697 79affe2988b09f0140e6127b0bb44e20 "pdflatex"
-  "main.tex" 1792847238.83169 21178 c3d4aa8f845aaeeba54ee8dd17613ca1 ""
+  "main.aux" 1792869451.06029 3697 79affe2988b09f0140e6127b0bb44e20 "pdflatex"
+  "main.tex" 1792869448.94001 21263 502ecfb256b37a79e50ae4f2480f1243 ""
   (generated)
   "main.aux"
   "main.log"
