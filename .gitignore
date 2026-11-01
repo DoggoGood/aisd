@@ -1,1 +1,13 @@
 /cw0/code/target/
+
+# Java and IDE build artifacts
+**/target/
+**/.classpath
+**/.project
+**/.settings/
+# LaTeX auxiliary files
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.synctex.gz
