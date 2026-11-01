@@ -327,8 +327,12 @@ Proszę utworzyć cztery obrazki wynikowe (zapisują się w korzeniu projektu) i
     \caption{,,Wizualizacja'' wypełnienia hasza w zależności od typu danych i funkcji haszującej.\ (Białe piksele oznaczają zapełnione komórki, a czarne -- puste.)}
 \end{figure}
 
-\noindent \textbf{Komentarz do otrzymanych wizualizacji:} \hl{TODO ------------------}.
-
+\noindent \textbf{Komentarz do otrzymanych wizualizacji:}
+Hashowanie dwukrotne daje nam lepsze rozproszenie danych od hashowania
+liniowego. Widać, że dla bardziej złośliwych danych MIT, hashowanie liniowe
+daje nam grupowanie pierwotne, a hashowanie dwukrotne daje nam lepsze
+rozproszenie danych. Oczywiście można uzyskać jeszcze lepsze wyniki poprzez
+wzięcie lepszych funkcji do hashowania dwukrotnego.
 \newpage
 
 \subsection{Zadanie 3}
@@ -352,32 +356,32 @@ Proszę uzupełnić miejsce na komentarz (wnioski).
 
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{example-image}
-        \caption[]{{Set\_1. Dane \textbf{MIT}. \hl{a=??? $|$ b=???}}}
+        \includegraphics[width=\textwidth]{images/quadratic_probing_set_1.png}
+        \caption[]{{Set\_1. Dane \textbf{MIT}. \hl{a=1 $|$ b=1}}}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{example-image}
-        \caption[]{{Set\_2. Dane \textbf{MIT}. \hl{a=??? $|$ b=???}}}
+        \includegraphics[width=\textwidth]{images/quadratic_probing_set_2.png}
+        \caption[]{{Set\_2. Dane \textbf{MIT}. \hl{a=1 $|$ b=99}}}
     \end{subfigure}
     \vskip\baselineskip
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{example-image}
-        \caption[]{{Set\_3. Dane \textbf{MIT}. \hl{a=??? $|$ b=???}}}
+        \includegraphics[width=\textwidth]{images/quadratic_probing_set_3.png}
+        \caption[]{{Set\_3. Dane \textbf{MIT}. \hl{a=101 $|$ b=203}}}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{example-image}
-        \caption[]{{Set\_4. Dane \textbf{MIT}. \hl{a=??? $|$ b=???}}}
+        \includegraphics[width=\textwidth]{images/quadratic_probing_set_4.png}
+        \caption[]{{Set\_4. Dane \textbf{MIT}. \hl{a=4001 $|$ b=7919}}}
     \end{subfigure}
     \vskip\baselineskip
         \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{example-image}
-        \caption[]{{Set\_\hl{???}. Dane \textbf{losowe}. \hl{a=??? $|$ b=???}}}
+        \includegraphics[width=\textwidth]{images/quadratic_probing_random.png}
+        \caption[]{{Set\_5. Dane \textbf{losowe}. \hl{a=4001 $|$ b=7919}}}
     \end{subfigure}
 
     \caption{,,Wizualizacja'' wypełnienia hasza przy \textbf{adresowaniu kwadratowym}.\
@@ -388,7 +392,8 @@ Proszę uzupełnić miejsce na komentarz (wnioski).
     
 \end{figure}
 
-\noindent \textbf{Komentarz do otrzymanych wizualizacji:} \hl{TODO ------------------}.
+\noindent \textbf{Komentarz do otrzymanych wizualizacji:}
+Tutaj widać, że adresowanie kwadratowe daje nam lepsze rozproszenie danych dla większych wartości a i b. Warto też używać wartości a i b, które nie są parzyste.
 
 \newpage
 

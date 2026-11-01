@@ -1,6 +1,5 @@
 package pl.edu.pw.ee.aisd2026zex3;
 
-import pl.edu.pw.ee.aisd2026zex3.exceptions.NotImplementedException;
 import pl.edu.pw.ee.aisd2026zex3.services.HashTable;
 
 public abstract class HashOpenAddressing<T extends Comparable<T>> implements HashTable<T> {
@@ -9,6 +8,7 @@ public abstract class HashOpenAddressing<T extends Comparable<T>> implements Has
     private int size;
     private int nElems;
     private T[] hashElems;
+    private boolean[] deleted;
     private final double correctLoadFactor;
 
     HashOpenAddressing() {
@@ -20,6 +20,7 @@ public abstract class HashOpenAddressing<T extends Comparable<T>> implements Has
 
         this.size = size;
         this.hashElems = createTable(this.size);
+        this.deleted = new boolean[this.size];
         this.correctLoadFactor = 0.75;
     }
 
@@ -32,7 +33,7 @@ public abstract class HashOpenAddressing<T extends Comparable<T>> implements Has
         int i = 0;
         int hashId = hashFunc(key, i);
 
-        while (hashElems[hashId] != nil) {
+        while (hashElems[hashId] != nil && !deleted[hashId]) {
             if (i + 1 == size) {
                 doubleResize();
                 i = -1;
@@ -42,17 +43,48 @@ public abstract class HashOpenAddressing<T extends Comparable<T>> implements Has
         }
 
         hashElems[hashId] = newElem;
+        deleted[hashId] = false;
         nElems++;
     }
 
     @Override
     public T get(T elem) {
-        throw new NotImplementedException("TODO: get(...)");
+        validateInputElem(elem);
+
+        int key = elem.hashCode();
+        int i = 0;
+        int hashId = hashFunc(key, i);
+
+        while (hashElems[hashId] != nil || deleted[hashId]) {
+            if (hashElems[hashId] != nil && hashElems[hashId].equals(elem)) {
+                return hashElems[hashId];
+            }
+            i = (i + 1) % size;
+            hashId = hashFunc(key, i);
+        }
+
+        return null;
     }
 
     @Override
     public void delete(T elem) {
-        throw new NotImplementedException("TODO: delete(...)");
+        validateInputElem(elem);
+
+        int key = elem.hashCode();
+        int i = 0;
+        int hashId = hashFunc(key, i);
+
+        while (hashElems[hashId] != nil || deleted[hashId]) {
+            if (hashElems[hashId] != nil && hashElems[hashId].equals(elem)) {
+                hashElems[hashId] = nil;
+                deleted[hashId] = true;
+                nElems--;
+                return;
+            }
+            i = (i + 1) % size;
+            hashId = hashFunc(key, i);
+        }
+
     }
 
     private void validateHashInitSize(int initialSize) {
@@ -90,20 +122,18 @@ public abstract class HashOpenAddressing<T extends Comparable<T>> implements Has
     }
 
     private void doubleResize() {
-        this.size *= 2;
-
         T[] oldElems = hashElems;
+        this.size *= 2;
         hashElems = createTable(size);
+        deleted = new boolean[size];
         nElems = 0;
 
-        T currentElem;
-        for (int i = 0; i < oldElems.length; i++) {
-            currentElem = oldElems[i];
-
-            if (currentElem != nil) {
-                put(currentElem);
-                oldElems[i] = nil;
+        int i = 0;
+        while (i < oldElems.length) {
+            if (oldElems[i] != nil) {
+                put(oldElems[i]);
             }
+            i++;
         }
     }
 }
