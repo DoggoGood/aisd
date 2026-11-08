@@ -31,7 +31,7 @@ public abstract class RbtMapTreeHeightTest {
     public void countTreeHeightDependingOnDataSize() {
         MapInterface<String, Integer> map = new RbtMap<>();
         int currentSize = 0;
-        int step = 100;
+        int step = 1000;
 
         int nOfPuts;
 

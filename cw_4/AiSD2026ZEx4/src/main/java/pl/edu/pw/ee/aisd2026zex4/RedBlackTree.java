@@ -147,7 +147,13 @@ public class RedBlackTree<K extends Comparable<K>, V> {
     }
 
     private Node<K, V> rotateRight(Node<K, V> node) {
-        throw new NotYetImplementedException("This method has not yet been implemented. This is a task for you.");
+        Node<K, V> head = node.getLeft();
+        node.setLeft(head.getRight());
+        head.setRight(node);
+        head.setColor(node.getColor());
+        node.setColor(RED);
+
+        return head;
     }
 
     private void changeColorsIfNeeded(Node<K, V> node) {

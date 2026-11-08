@@ -14,7 +14,7 @@
 
 
 \title{AiSD Ex. 4.2 (Pon.)}
-\author{\hl{Imię i Nazwisko}}
+\author{\hl{Mateusz Kamieniecki}}
 \date{\today}
 
 \lstset{
@@ -168,14 +168,23 @@ Proszę, odwołując się do teorii i swojej wiedzy, ustalić, czy wynikowy wykr
 Proszę odpowiedzieć, jak wyglądałby wynikowy wykres, gdyby wstawiane dane (klucze) były wstawiane
 w~porządku rosnącym. A jak wyglądałyby dane wstawiane w porządku malejącym?
 
-% \begin{figure}[h]{\textwidth}
-%     \centering
-%     \includegraphics{example-image-a}
-%     \caption{Wykres pokazujący zmianę wysokości drzewa czerwono-czarnego (lewostronnie czerwonego), gdy wstawiane dane (klucze) są wstawiane w porządku losowym.}
-%     \label{figure:rbt_rand_height}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/rbt_rand_data_tree_height.png}
+    \caption{Liczba wywołań rekurencyjnej metody \texttt{put} podczas wstawiania danych losowych do drzewa czerwono-czarnego.}
+    \label{fig:rbt_rand_height}
+\end{figure}
 
-\noindent \textbf{Miejsce na odpowiedź:} \hl{TODO ------------------}.
+\noindent \textbf{Wnioski:}
+
+Wykres wygląda sensownie: wraz ze wzrostem liczby elementów liczba wywołań
+\verb|put| ogólnie rośnie, ale lokalnie może się zmniejszać. Wynika to z losowej
+kolejności kluczy i różnej głębokości, na której trafia kolejny element.
+
+Dzięki rotacjom i zmianom kolorów drzewo pozostaje zrównoważone, więc wzrost
+jest zbliżony do logarytmicznego. Dla danych rosnących i malejących oczekiwany
+byłby podobny wynik. \verb|nOfPuts| nie oznacza jednak dokładnej wysokości
+drzewa, lecz liczbę wywołań \verb|put| dla ostatnio wstawianych danych.
 
 \newpage
 
@@ -186,7 +195,23 @@ usuwanych z) początkowo pustego drzewa czerwono-czarnego) prowadzący do sytuac
 ,,podwójnie czarnego'' w klasycznym RBT.
 Proszę krótko wyjaśnić, dlaczego dany przykład doprowadzi do takiej sytuacji.
 
-\noindent \textbf{Miejsce na odpowiedź:} \hl{TODO ------------------}.
+\noindent \textbf{Przykład:}
+
+Do początkowo pustego klasycznego drzewa czerwono-czarnego wstawiamy kolejno
+klucze \(2, 1, 3\). Po zakończeniu wstawiania otrzymujemy:
+
+\begin{verbatim}
+        2(B)
+       /   \
+    1(B)   3(B)
+\end{verbatim}
+
+Następnie usuwamy klucz \(1\). Jest to czarny liść, więc po jego usunięciu
+w jego miejscu pozostaje czarny węzeł wartowniczy \(\mathrm{NIL}\). Usunięcie
+czarnego węzła zmniejsza liczbę czarnych węzłów na ścieżce z korzenia, dlatego
+otrzymany węzeł \(\mathrm{NIL}\) traktujemy jako ,,podwójnie czarny''. Dodatkowa
+Czerń nie jest rzeczywistym kolorem zapamiętanym w węźle, lecz oznacza
+konieczność wykonania procedury naprawiającej własność czarnych wysokości drzewa.
 
 \newpage
 
