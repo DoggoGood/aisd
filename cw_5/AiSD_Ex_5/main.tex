@@ -1,0 +1,154 @@
+\documentclass[twoside]{article}
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{epigraph}
+\usepackage{listings}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\usepackage{minted}
+
+
+\title{AiSD Ex. 5 (Pon., Wt.)}
+\author{\hl{Mateusz Kamieniecki}}
+\date{}
+
+\lstset{
+    numbers=left
+}
+
+\makeatletter
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\@title}
+\fancyhead[R]{\@author}
+\fancyhead[C]{\@date}
+
+\cfoot{\thepage\ / \pageref{LastPage}}
+
+
+\newpage
+\section{Zadania}
+
+
+\subsection{Zadanie 0}
+Proszę (już tradycyjnie) uporządkować swoje repozytorium, aby organizacja projektów wyglądała jak poniżej. 
+Oczywiście w tej strukturze mogą znajdować się również inne katalogi i pliki, ale proszę
+dokładnie odwzorować przedstawiony porządek projektów.
+
+\label{struktura}
+\begin{verbatim}
+.korzeń_repozytorium
++-- CW_0
+|   +-- wszystko, co było
+|
++-- CW_1
+|   +-- AiSD2026ZEx1
+|       +-- pom.xml
+|
++-- CW_2
+|   +-- AiSD2026ZEx2
+|       +-- pom.xml
+|
++-- CW_3
+|   +-- AiSD2026ZEx3
+|       +-- pom.xml
+|
++-- CW_4
+|   +-- AiSD2026ZEx4
+|       +-- pom.xml
+|
++-- CW_5
+    +-- AiSD2026ZEx5
+    |   +-- pom.xml
+    |
+    +-- README.md
+\end{verbatim}
+
+\newpage
+
+\subsection{Zadanie 1}
+Proszę zaimplementować program pozwalający na wykonywanie bezstratnych kompresji i dekompresji pojedynczych plików.
+
+\subsubsection{Struktura}
+
+Chcąc osiągnąć ten cel, należy stworzyć projekt \textit{Maven-owy} o parametrach strukturalnych:
+\begin{itemize}
+    \item \textbf{groupId:} \verb|pl.edu.pw.ee|;
+    \item \textbf{artifactId:} \verb|AiSD2026ZEx5|.
+\end{itemize}
+
+Powyższe informacje powinny Państwu sugerować, że struktura tego projektu będzie analogiczna 
+do wszystkiego, co do tej pory robiliśmy.
+
+\subsubsection{Kompilacja + uruchomienie}
+
+Projekt \textit{Maven-owy} powinien pozwolić na wykonanie fazy \textbf{package} 
+(najlepiej w~wariancie z wiersza poleceń, komendą: \verb|mvn clean package|), której wynikiem
+powinno być stworzenie uruchamialnego archiwum JAR: \verb|AiSD2026ZEx5.jar|.\\
+
+Przykładowe uruchomienie mogłoby wyglądać następująco:
+\begin{minted}[breaklines]{bash}
+java -jar AiSD2026ZEx5.jar -m comp -s sciezka/do/katalogu/niemanie.txt -d sciezka/do/innego/katalogu/niemanie_txt.comp -l 2
+\end{minted}
+
+w którym argument:
+\begin{itemize}
+    \item \verb|-m| może przyjmować jedną z dwóch wartości: \verb|comp|, \verb|decomp| -- w zależności od trybu działania programu, odpowiednio dla kompresji i dekompresji;
+    \item \verb|-s| określa ścieżkę do pliku wejściowego (poddawanego kompresji lub dekompresji);
+    \item \verb|-d| określa ścieżkę do pliku wyjściowego, w którym powinien zostać zapisany wynik działania programu (wynikowy plik po kompresji lub dekompresji);
+    \item \verb|-l| określa maksymalną długość łańcuchów, które powinny stanowić pojedynczą sekwencję odpowiadającą słowu kodowemu (np. \verb|-l 2| oznacza, że zamiast wyznaczać słowa dla pojedynczych znaków, program będzie kodował pary znaków). Domyślna wartość tego argumentu wynosi \verb|l=1|.
+\end{itemize}
+
+\subsection{Pozostałe wymagania}
+\begin{enumerate}
+    \item Państwa implementacje powinny być przetestowane zarówno testami jednostkowymi (polecam\
+    \verb|JaCoCo| jako wyszukiwanie miejsc, które wymagają Państwa uwagi) jak i testami akceptacyjnymi (czyli użytkowo).
+    \item Program powinien być odporny na błędy (np.: podanie nieprawidłowych argumentów, podanie ścieżki do nieistniejącego pliku wejściowego).
+    \item Program nie powinien wymagać dodatkowej interakcji z użytkownikiem w~trakcie działania.
+    \item Sytuacje wyjątkowe (zgłoszenie wyjątków i błędów) powinno jawnie pochodzić z Państwa kodu.\
+    Inaczej: jeśli program zgłosi jakiś wyjątek, to ten wyjątek ma być przez Państwa jawnie (literalnie) zapisany w kodzie.
+    \item Wynikowy program (wraz z przeprowadzeniem kompilacji) musi poprawnie działać na komputerach laboratoryjnych.
+    \item Można korzystać ze struktur danych i abstrakcyjnych typów danych, które oferuje interfejs \verb|List|.\
+    Można również korzystać z kodu, który pojawił się na wszystkich poprzednich ćwiczeniach.\
+    Jeśli potrzebują Państwo czegoś więcej, to trzeba to samodzielnie napisać.\
+    \textbf{W skrócie:} nie powinni Państwo wykorzystywać (poza pakietem testów) dodatkowych bibliotek.
+\end{enumerate}
+
+\subsubsection{A jeśli...}
+\begin{enumerate}
+    \item Nie będę weryfikował istnienia testów.\
+    Jednak zawsze warto mieć testy (to taka dobra praktyka inżynierska).
+    \item Można rozszerzyć działanie programu. Można mieć dodatkowe parametry uruchomienia.\
+    Ale... podane w poleceniu argumenty (w tej formie, z taką nazwą) mają być przez Państwa program obsłużone prawidłowo.
+\end{enumerate}
+
+\subsection{README}
+W pliku \verb|README.md| (umieszczonym w miejscu zgodnym ze strukturą (patrz: punkt \ref{struktura})
+należy zawrzeć instrukcję pozwalającą na kompilację i uruchomienie kodu.
+Zależy mi na działającej, przykładowej instrukcji, którą mogę wziąć i bez wprowadzania zmian uruchomić.
+
+Jeśli będą Państwo mieli do przekazania jakiś komentarz odnośnie swojej pracy, to plik 
+\verb|README.md| jest do tego odpowiednim miejscem.
+
+
+\section{Zakończenie pracy}
+Na koniec zajęć (\underline{bez przekroczenia} z góry ustalonego terminu), gdy już będą Państwo
+przekonani, że wszystko jest zrobione zgodnie z planem, proszę wysłać swoje zmiany do repozytorium zdalnego, a wersję, która ma być sprawdzona, proszę oznaczyć tagiem (jak zawsze: 
+\underline{ze znacznikiem czasowym}) \verb|CW_5_FINAL|.
+
+Tag musi być dla mnie widoczny (w repozytorium zdalnym).
+Brak oznaczenia pracy tagiem będzie skutkował niezaliczeniem ćwiczenia 5.
+
+\textbf{Uwaga!} Nie ma obowiązku wykonania opisanego wyżej programu w ramach aktualnego ćwiczenia.
+Ale koniecznie muszą Państwo umieścić w repozytorium tag, nawet jeżeli niczego Państwo nie zaimplementowali.
+
+\end{document}
