@@ -1,0 +1,193 @@
+\documentclass[twoside]{article}
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{epigraph}
+\usepackage{listings}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{chngpage}
+
+
+\title{AiSD Ex. 5., zadania}
+\author{\hl{Imię i Nazwisko}}
+\date{\today}
+
+\lstset{
+    numbers=left
+}
+
+\makeatletter
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\@title}
+\fancyhead[R]{\@author}
+\fancyhead[C]{\@date}
+
+\cfoot{\thepage\ / \pageref{LastPage}}
+
+
+\newpage
+\section{Zadania}
+
+
+\subsubsection{Pytania, żeby się nie nudzić w trakcie zajęć}
+\label{section:questions_v2}
+
+\textbf{1.} Czy na drzewie binarnym, które nie jest regularne, można zbudować kod prefiksowy? 
+Czy taki kod może być optymalny?
+Proszę uzasadnić odpowiedź.
+
+\hl{Miejsce na odpowiedzi (na temat, ale krótko): .....TODO}
+\newline
+
+\textbf{2.} Proszę wyliczyć koszt drzewa powstałego (analogicznie do przykładu z~zajęć) dla ciągu znaków 
+(przecinki i spacje również należy uwzględnić; wielkość liter proszę pominąć):
+\textit{Więc jeszcze seta, znakomicie 
+Padniemy, ale zgódźcie się 
+Że z tylu różnych dróg przez życie
+Każdy ma prawo wybrać źle}.
+
+\hl{Miejsce na odpowiedź (obliczenia + opcjonalnie rysunek / zdjęcie wynikowego drzewa): .....TODO}
+\newline
+
+\textbf{3.} W pliku poddawanym kompresji występują wszystkie (256) symbole ośmiobitowe z prawie równą
+częstotliwością (tzn. symbol występujący najczęściej może wystąpić maksymalnie dwa razy częściej niż 
+symbol występujący najrzadziej).
+Jaka będzie różnica (zysk w postaci zaoszczędzonych bitów), gdy oryginalny zapis ośmiobitowy zastąpimy 
+kodowaniem Huffmana? 
+Proszę uzasadnić odpowiedź.
+
+\hl{Miejsce na odpowiedź (wraz z uzasadnieniem): .....TODO}
+\newline
+
+\textbf{4.} Czym, w przypadku wyznaczania kodu prefiksowego algorytmem Huffmana, jest własność wyboru zachłannego?
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{5.} Dlaczego o algorytmie Huffmana (wyznaczania kodu prefiksowego) 
+można powiedzieć, że ma własność optymalnej podstruktury?
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{6.} W trakcie wykładu, kodując drzewo Huffmana, wykorzystywaliśmy trawersację pre-order.
+Czy zamiast tego podejścia można wykorzystać jedną z~dwóch pozostałych metod (in-order, post-order)?
+Proszę uzasadnić odpowiedź.
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{7.} Proszę podać przykład tekstu (może być jedno słowo), dla którego algorytm LZW będzie:
+(A) lepszy, 
+(B) gorszy od kodowania Huffmana.
+
+\hl{Miejsce na odpowiedzi: .....TODO}
+\newline
+
+\textbf{8.} Załóżmy, że w jakimś tekście \textit{X} symbol \textit{p} występuje znacznie częściej 
+niż symbol \textit{k}. 
+Słowo kodowe którego z tych symboli będzie krótsze?
+Czy zawsze będzie krótsze? Proszę uzasadnić odpowiedź.
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{9.} Proszę podać złożoność obliczeniową (czasową) operacji dodawania 
+elementu do kolejki priorytetowej zaimplementowanej na kopcu. 
+Proszę wyjaśnić, z czego wynika podana wartość złożoności obliczeniowej.
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{10.} Dla każdego z podanych poniżej słów (w tabeli \ref{table:huffman-tree-cost}.)
+proszę zbudować drzewo Huffmana, proszę wyliczyć koszt każdego z tych drzew.
+Proszę pokazać odręcznie wykonane wynikowe drzewo (może być w formie wycinka zdjęcia kartki). 
+Wyniki proszę umieścić w tabeli \ref{table:huffman-tree-cost}.
+
+\begin{table}[h!]
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|r|}{Lp.} & Słowo    & Graficzna reprezentacja drzewa & Koszt drzewa \\ \hline
+1.                        & wandal   &                                &              \\ \hline
+2.                        & manna    &                                &              \\ \hline
+3.                        & wycofana &                                &              \\ \hline
+\end{tabular}
+\caption{Rozwiązania z wyliczeniem kosztu drzew Huffmana zbudowanych na poszczególnych słowach.}
+\label{table:huffman-tree-cost}
+\end{table}
+
+\textbf{11.} Czy prawdziwe jest stwierdzenie, że koszt drzewa jest sumą wewnętrznych węzłów drzewa kodowania
+(węzłów niebędących liśćmi tego drzewa)? 
+Proszę uzasadnić odpowiedź -- najlepiej będzie, jeśli przeprawadzą Państwo dowód dla tej tezy.
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{12.} Podczas budowania drzewa kodowania, wykorzystując podejście zachłanne, z kolejki priorytetowej
+wybierana jest para drzew, które następnie łączone są w jedno drzewo.
+(A) Jeżeli istnieje kilka drzew (więcej niż dwa) o takiej samej wartości w korzeniu, to czym należy się 
+kierować podczas wyboru tych drzew?
+(B) Czy zmiana kolejności wyboru tych drzew (wyboru dwóch drzew do pary) może wpłynąć na końcową 
+strukturę / kształt drzewa?
+(C) Czy taka zmiana będzie miała wpływ na końcowy rezultat kompresji (w kontekście kosztu drzewa)?
+
+\hl{Miejsce na odpowiedź: .....TODO}
+\newline
+
+\textbf{13.} Ciągi składające się z symboli \verb|0| i \verb|1| można tworzyć wykorzystując 
+m.in. słowa: Thuego-Morse'a, Cantora, Fibonacciego, \href{https://googlethatforyou.com?q=Regular%20paperfolding%20sequence}{Paper-folding} (składania kartki papieru).
+
+\begin{table}[h!]
+\begin{adjustwidth}{-1in}{} 
+\begin{tabular}{|l|l|p{1.5cm}|p{1.5cm}|l|p{5cm}|}
+\hline
+Lp. & Nazwa & Pierwsze (zerowe) słowo & Drugie słowo & Trzecie słowo & Opis wyliczania i-tego słowa \\ \hline
+1. & Thuego-Morse'a & 0 & 01 & 0110 & Każde kolejne słowo zastępuje znaki w poprzednim słowie. 0 -\textgreater 01; 1 -\textgreater{}10. \\ \hline
+2. & Cantora & 1 & 101 & 101000101 & Pierwszym słowem jest 1. Każde kolejne słowo powstaje przez zastąpienie symboli poprzedniego słowa: 0-\textgreater{}000, 1-\textgreater{}101. \\ \hline
+3. & Paper-folding & 1 & 110 & 1101100 & W każdym kroku zginamy kartkę papieru w prawo. Po wykonaniu n zgięć zapisujemy powstałe zgięcia. Jeśli jest zgięcie w prawo, to zapisujemy 1, a jeśli w lewo -- 0. \\ \hline
+4, & Fibonacciego & 1 & 0 & 01 & Początkowym słowem jest 1. Kolejne słowa powstają przez zastąpienie symboli poprzedniego słowa: 0-\textgreater{}01, 1-\textgreater{}0. \\ \hline
+\end{tabular}
+\end{adjustwidth}
+\caption{Skrócony opis wybranych słów nad alfabetem syboli binarnych.}
+\label{table:words-transform-description}
+\end{table}
+
+Dla podanych definicji tworzenia słów \ref{table:words-transform-description}, proszę uzupełnić tabelę \ref{table:words-transform-results}.
+\newline
+
+\begin{table}[ht!]
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|r|}{Lp.} & Opis                                                        & Wynik \\ \hline
+1.                        & Piąte słowo Cantora kompresowane przez algorytm RLE         &       \\ \hline
+2.                        & Wynik TBW przeprowadzonej na piątym słowie Thuego-Morse'a   &       \\ \hline
+3.                        & Wynik algorytmu MTF na szóstym słowie Fibonacciego          &       \\ \hline
+4.                        & Wynik TBW przeprowadzonej na piątym słowie Paper-folding    &       \\ \hline
+5.                        & Wynik algorytmu MTF przeprowadzonego na wyniku z wiersza 4. &       \\ \hline
+6.                        & Wynik algorytmu RLE przeprowadzonego na wyniku z wiersza 5. &       \\ \hline
+\end{tabular}
+\caption{Rozwiązania przekształceń wykonanych na słowach symboli binarnych.}
+\label{table:words-transform-results}
+\end{table}
+\newline
+
+\textbf{14.}
+Proszę pokazać wyniki działania transformaty Burrowsa-Wheelera na napisie powstałym z połączenia własnego 
+imienia i nazwiska. 
+Proszę pokazać dwa warianty rozwiązania.
+\newline
+
+\hl{Miejsce na odpowiedź: .....TODO}
+
+\end{document}

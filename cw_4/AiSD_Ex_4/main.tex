@@ -175,17 +175,41 @@ w~porządku rosnącym. A jak wyglądałyby dane wstawiane w porządku malejącym
     \label{fig:rbt_rand_height}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/rbt_asc_data_tree_height.png}
+    \caption{Liczba wywołań rekurencyjnej metody \texttt{put} podczas wstawiania danych rosnących do drzewa czerwono-czarnego.}
+    \label{fig:rbt_asc_height}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/rbt_desc_data_tree_height.png}
+    \caption{Liczba wywołań rekurencyjnej metody \texttt{put} podczas wstawiania danych malejących do drzewa czerwono-czarnego.}
+    \label{fig:rbt_desc_height}
+\end{figure}
+
 \noindent \textbf{Wnioski:}
 
 Wykres wygląda sensownie: wraz ze wzrostem liczby elementów liczba wywołań
-\verb|put| ogólnie rośnie, ale lokalnie może się zmniejszać. Wynika to z losowej
-kolejności kluczy i różnej głębokości, na której trafia kolejny element.
+\verb|put| ogólnie rośnie, ale lokalnie może się zmniejszać, ponieważ
+kolejne losowe klucze trafiają na różnej głębokości. Dzięki rotacjom i zmianom
+kolorów drzewo pozostaje zrównoważone, więc wzrost jest zbliżony do
+logarytmicznego: dla $n=10^6$ wartości wynoszą około 20--22, co zgadza się
+z $\lg n \approx 20$. Zmienna \verb|nOfPuts| nie oznacza dokładnej wysokości
+drzewa, lecz liczbę wywołań \verb|put| dla ostatnio wstawianego klucza.
 
-Dzięki rotacjom i zmianom kolorów drzewo pozostaje zrównoważone, więc wzrost
-jest zbliżony do logarytmicznego. Dla danych rosnących i malejących oczekiwany
-byłby podobny wynik. \verb|nOfPuts| nie oznacza jednak dokładnej wysokości
-drzewa, lecz liczbę wywołań \verb|put| dla ostatnio wstawianych danych.
+Dla danych rosnących trend jest również logarytmiczny, ale wykres ma kształt
+schodkowy i przyjmuje wartości około $\lfloor \lg n \rfloor + 1$ (20 dla
+$10^6$). W LLRB czerwone linki występują tylko po lewej stronie, więc ścieżka do
+największego klucza składa się z czarnych linków, a jej długość odpowiada
+czarnej wysokości.
 
+Dla danych malejących wykres jest nieregularny, a wartości wyraźnie wyższe
+(głównie 25--30, ze szczytem około 34). Ścieżka do najmniejszego klucza może
+bowiem zawierać czerwone linki, przez co jest dłuższa. Teoria gwarantuje, że
+wysokość LLRB wynosi najwyżej $2\lg(n+1)$, czyli dla $n=10^6$ około 40, więc
+oba wykresy mieszczą się w oczekiwanych granicach.
 \newpage
 
 \subsection{Zadanie 6}

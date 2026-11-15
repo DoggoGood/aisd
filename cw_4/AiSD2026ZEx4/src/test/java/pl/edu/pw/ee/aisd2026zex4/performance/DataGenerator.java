@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class DataGenerator {
 
-    private static final long RANDOM_SEED = 123L;
+    private static final long RANDOM_SEED = 42L;
 
     public String[] generateRandData(int size) {
         String[] data = generateAscData(size);
