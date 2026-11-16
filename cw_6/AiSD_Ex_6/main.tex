@@ -1,0 +1,287 @@
+\documentclass[twoside]{article}
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{epigraph}
+\usepackage{listings}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+
+\title{AiSD Ex. 6 (Pon.)}
+\author{\hl{Mateusz Kamieniecki}}
+\date{\today}
+
+\lstset{
+    numbers=left
+}
+
+\makeatletter
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\@title}
+\fancyhead[R]{\@author}
+\fancyhead[C]{\@date}
+
+\cfoot{\thepage\ / \pageref{LastPage}}
+
+
+\newpage
+
+\section{Wprowadzenie}
+Niektóre problemy wymagają od nas znalezienia rozwiązania pośród wielu możliwych rozwiązań -- są
+to problemy optymalizacyjne. Szukając najlepszego rozwiązania (rozwiązania optymalnego), chcemy
+znaleźć takie rozwiązanie, w którym końcowy wynik (w zależności od zagadnienia) będzie największy
+lub najmniejszy. Co istotne, rozwiązanie danego problemu może mieć więcej niż jedno rozwiązanie
+optymalne (dające ten sam wynik).
+
+Na podstawie poprzednich zajęć wiemy, że niektóre problemy optymalizacyjne można rozwiązywać
+wykorzystując podejście zachłanne (najpierw wybieramy podproblem, który w danym momencie wydaje się najlepszy, a następnie go rozwiązujemy), w którym rozwiązywany problem musi mieć własności:
+optymalnej podstruktury i wyboru zachłannego.
+
+Innym -- dość podobnym choć ogólniejszym -- podejściem do problemów optymalizacyjnych jest 
+programowanie dynamiczne.
+Technika ta zakłada (podobnie jak w podejściu zachłannym), że nasze optymalne rozwiązania problemów
+składają się z optymalnych rozwiązań podproblemów, a same podproblemy są od siebie niezależne będąc
+jednocześnie wspólnymi podproblemami dla innych problemów.
+
+Jak to rozumieć?
+Poszukajmy porównania do podejścia \textit{dziel i zwyciężaj}.
+Dla ustalenia uwagi przyjmijmy, że rozpatrujemy algorytm szybkiego sortowania (algorytm 
+typu \textit{dziel i zwyciężaj}). 
+W tym zagadnieniu mieliśmy duży problem (posortowanie całej tablicy -- ustalmy, że sortowanie 
+dotyczyło tablicy liczb całkowitych), który dzieliliśmy na mniejsze podproblemy (mniejsze podproblemy dzieliliśmy na jeszcze mniejsze podproblemy, i tak postępowaliśmy, aż osiągnęliśmy
+ustalony rozmiar podproblemu).
+Te podproblemy były od siebie niezależne.
+Rozwiązanie (posortowanie) części tablicy nie wpływało na wynik posortowania innej części tablicy.
+Jednocześnie mając podproblem \verb|pp1|, nie mogliśmy w żaden sposób wykorzystać
+rozwiązania jego podproblemów (\verb|pp1_1|, \verb|pp1_2|) jako rozwiązań innych podproblemów
+(np.: \verb|pp2|).
+
+W przypadku programowania dynamicznego, mimo że problemy (podproblemy) są niezależne, 
+to jednocześnie są one wspólne, czyli na drodze do znalezienia rozwiązania głównego problemu,
+wielokrotnie rozwiązujemy te same (mniejsze) podproblemy.
+
+A dlaczego to jest takie istotne?
+Wynika to ze sposobu konstrukcji rozwiązań w programowaniu dynamicznym: zaczynamy rozwiązywać
+duże problemy od ich małych podproblemów, których rozwiązania są zapamiętywane.
+Jeśli jakiś podproblem wystąpi ponownie, to zamiast wykonywać kolejny raz te same obliczenia, 
+odwołujemy się do zapamiętanych wcześniej rozwiązań.
+Co oznacza, że korzystna jest sytuacja, gdy wielokrotnie w rozwiązaniu głównego problemu występują
+te same podproblemy.
+W takim zagadnieniu (naiwnym, bez techniki programowania dynamicznego), podejście
+rekurencyjne może znacząco wydłużyć czas poszukiwania prawidłowego rozwiązania.
+
+Spróbujmy to zobaczyć na poniższym przykładzie (inspiracja: C. L. R. S.).
+
+
+\subsection{Problem cięcia pręta}
+
+Problem cięcia pręta wygląda następująco: fabryka produkuje pręt o długości \textit{L}, a następnie
+chce na nim jak najwięcej zarobić.
+Okazuje się, że fragmenty pręta o różnej długości mają różną cenę.
+W zależności od tego, na jakie fragmenty potniemy oryginalny pręt, fabryka zarobi na tym jednym
+pręcie mniej lub więcej pieniędzy.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|r|}
+\hline
+Długość pręta $L$ [m] & 1 & 2 & 3 & 4  & 5  & 6  & 7  & 8  & 9  & 10 \\ \hline
+Cena pręta $c_L$ [zł] & 2 & 6 & 9 & 10 & 11 & 18 & 18 & 21 & 25 & 31 \\ \hline
+\end{tabular}
+\caption{Tabela pokazująca cenę (zł) pręta o długości $L$ metrów.}
+\label{table:rod_price}
+\end{table}
+
+Jeśli przyjmiemy, że znana jest cena $c_L$ pręta o długości $L$ -- co pokazano w~tabeli 
+\ref{table:rod_price}. -- to możemy ustalić wszystkie rozwiązania (wszystkie możliwe zestawy cięć),
+z których wybierzemy najlepsze (dające największy zysk).
+Przykładowo: jeśli pręt ma długość 10 metrów, a cięcie jest możliwe tylko na odcinki pełnych metrów,
+to możemy wykonać cięcie na $2^{L-1}$ sposobów (choć część rozwiązań będzie powtórzonych, ponieważ cięcie pręta od lewej strony jest analogicznym cięciem pręta od prawej strony).
+
+Problem cięcia pręta jest problemem charakteryzującym się optymalną podstrukturą:
+optymalne rozwiązanie problemu (pocięcia pręta) wymaga znalezienia optymalnego rozwiązania 
+podproblemów (optymalnego pocięcia mniejszych fragmentów oryginalnego pręta) dających jak największy
+zysk dla dwóch pociętych fragmentów.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|r|r|r|l|}
+\hline
+Lp. & Długość pręta & Optymalne rozwiązanie & Cięcia                     \\ \hline
+1.  & 1             & 2                     & -                          \\ \hline
+2.  & 2             & 6                     & -                          \\ \hline
+3.  & 3             & 9                     & -                          \\ \hline
+4.  & 4             & 12                    & 2+2                        \\ \hline
+5.  & 5             & 15                    & 2+3                        \\ \hline
+6.  & 6             & 18                    & bez cięć; 3+3; 2+2+2       \\ \hline
+7.  & 7             & 21                    & 2+2+3                      \\ \hline
+8.  & 8             & 24                    & 2+6; 2+3+3                 \\ \hline
+9.  & 9             & 27                    & 3+3+3; 3+6; 2+2+2+3        \\ \hline
+10. & 10            & 31                    & -                          \\ \hline
+\end{tabular}
+\caption{Zestawienie optymalnych wyników dla problemu cięcia pręta o długości od 1 do 10.}
+\end{table}
+
+Rekurencyjnie można ten problem przedstawić opisowo w następujący sposób:
+wybieramy pierwszą część, a dla pozostałej części próbujemy odszukać (rekurencyjnie) optymalne 
+rozwiązanie.
+Jeśli przez $r$ oznaczymy oczekiwane maksymalne rozwiązanie, to optymalne rozwiązanie dla 
+pręta o długości $L$ można zapisać jako:
+$$r_L=max(c_i+r_{L-i})$$, dla $i \leq L$.
+
+Problem w tym, że takie podejście, choć końcowo powinno przynieść oczekiwany wynik, jest kosztowne
+obliczeniowo -- zapisanie tego wzoru w najprostszej rekurencyjnej implementacji będzie 
+charakteryzowało się złożonością wykładniczą $O(2^L)$.
+
+Dlatego też ten problem sensowniej jest rozwiązać wykorzystując programowanie dynamiczne.
+Do wyboru są dwa podejścia:
+\begin{itemize}
+    \item metoda zstępująca ze spamiętywaniem, czyli podejście rekurencyjne wykorzystujące 
+    zapamiętane wcześniejsze wyniki obliczeń);
+    \item metoda wstępująca -- zaczynamy od najmniejszych podproblemów i stopniowo rozwiązujemy 
+    coraz większe (oczekujące wyników z mniejszych, już obliczonych podproblemów).
+\end{itemize}
+
+Dla obu podejść do problemu cięcia pręta złożoność czasowa powinna być klasy $O(L^2)$ 
+(a nawet $\theta(L^2)$).
+
+Można zauważyć, że w ogólnym problemie programowania dynamicznego, jeśli wszystkie możliwe 
+podproblemy trzeba rozwiązać przynajmniej jeden raz, to metoda wstępująca powinna dawać lepszy wynik
+(unikamy obsługi wywołań rekurencyjnych).
+W przypadku odwrotnym, gdy nie wszystkie możliwe podproblemy wymagają rozwiązania (niektóre 
+istniejące podproblemy są pomijane, czyli ich wyznaczanie nie przekłada się na rozwiązanie 
+większych problemów), to metoda zstępująca (podejście rekurencyjne ze spamiętywaniem) może okazać
+się efektywniejsza, ponieważ będzie zajmowała się tylko tymi podproblemami, które rzeczywiście są
+konieczne do znalezienia rozwiązania optymalnego (a pozostałe pominie).
+
+
+\subsection{Problem nawiasowania iloczynu macierzy}
+
+Problem mnożenia ciągu macierzy jest problemem nawiasowania, czyli ustalenia kolejności mnożeń
+poszczególnych macierzy w taki sposób, aby zminimalizować liczbę koniecznych mnożeń skalarnych.
+Zasadniczo w tym problemie nie chodzi o wykonanie samych obliczeń (wymnożenie macierzy), a 
+,,jedynie'' o ustalenie kolejności, w jakiej powinny być ze sobą mnożone.
+Optymalne nawiasowanie iloczynu $N$ ($N >= 2$) macierzy wymaga znalezienia optymalnego nawiasowania 
+,,podiloczynów'' (podproblemów).
+
+Powinniśmy zauważyć, że koszt wymnożenia macierzy $M_i, M_{i+1}, ..., M_j$ (dla $i < j$) wymaga 
+znalezienia optymalnego iloczynu podproblmów: $(M_i, M_{i+1}, ..., M_k)$ oraz 
+$(M_{k+1}, M_{k+2}, M_j)$ (dla $i \leq k < j$), 
+a następnie konieczne jest wymnożenie wyniku tych podproblemów ze sobą.
+
+Czy to rzeczywiście ma sens?
+Wiemy, że musimy wymnożyć ze sobą ciąg macierzy. Czyli musimy pomnożyć ze sobą dwie macierze (które 
+mogły powstać w wyniku mnożenia innych macierzy). Szukamy takiej kombinacji, która da nam optymalny 
+(w tym przypadku najmniejszy) wynik liczby mnożeń. Znajdując docelowe (optymalne) macierze (czyli 
+rozwiązania podproblemów), wiemy już, że one (te podproblemy) też musiały być optymalnymi rozwiązania dla swoich podproblemów.
+Nie może być inaczej, prawda?
+
+Zatem docieramy do znanej nam już własności optymalnych podproblemów (w programowaniu dynamicznym).
+Powinniśmy oczywiście pamiętać, że takich optymalnych rozwiązań może być więcej niż jedno, ale nas w pełni usatysfakcjonuje jedno z nich.
+
+Okazuje się, że konieczność przeszukania wszystkich możliwych kombinacji nawiasowania iloczynu 
+macierzy ma złożoność obliczeniową rzędu $\Omega(2^N)$, co oczywiście nie jest dla nas korzystnym 
+sposobem rozwiązania problemu.
+Implementując ten problem w wersji wstępującej można osiągnąć złożoność klasy $O(N^3)$. 
+\newpage
+
+\section{Zadania}
+
+\subsection{Zadanie 0}
+Proszę, analogicznie jak przy poprzednich ćwiczeniach,
+uporządkować swoje repozytorium, aby organizacja projektów wyglądała jak poniżej. 
+Oczywiście w tej strukturze mogą znajdować się również inne katalogi i pliki, ale proszę
+dokładnie odwzorować przedstawiony porządek projektów -- dla uproszczenia zapisu w tym dokumencie
+wyświetlanie poprzednich ćwiczeń zostało zredukowane do wyświetlania głównych katalogów.
+
+\begin{verbatim}
+.korzeń_repozytorium
++-- CW_0
++-- CW_1
++-- CW_2
++-- CW_3
++-- CW_4
++-- CW_5
++-- CW_6
+    +-- AiSD2026ZEx6
+        +-- pom.xml        
+\end{verbatim}
+
+\newpage
+
+\subsection{Zadanie 1}
+Dla dwóch problemów (cięcia pręta, mnożenia łańcucha macierzy) proszę wyznaczyć wielkości 
+problemów (tabele: \ref{table:rod_cutter_results}, \ref{table:matrix_chain_results},
+które mogą być realizowane przez poszczególne implementacje.
+
+Jak ustalić wartość graniczną? Jeżeli czas potrzebny do rozwiązania problemu o wielkości N (czyli 
+czas cięcia pręta o długości N lub czas mnożenia łańcucha N macierzy) zbliża się w przybliżeniu
+do 4 sekund, to można uznać, że znalezione N jest naszą wartością graniczną.
+Ten czas (4 sekundy) można dowolnie wydłużyć, ale na potrzeby naszego badania będzie 
+to wartość w zupełności wystarczająca.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|p{4cm}|}
+\hline
+\textbf{Implementacja}         & \textbf{Wielkość problemu, czyli długość pręta (N)} \\ \hline
+Rekurencyjna                   &                                                     \\ \hline
+Zstępująca (ze spamiętywaniem) &                                                     \\ \hline
+Wstępująca                     &                                                     \\ \hline
+\end{tabular}
+\caption{Tabela pokazuje wielkości problemów (cięcia pręta), które można rozwiązać w sensownym czasie danym podejściem (rekurencyjnym, zstępującym, wstępującym).}
+\label{table:rod_cutter_results}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|p{4cm}|}
+\hline
+\textbf{Implementacja}         & \textbf{Wielkość problemu, czyli liczba macierzy (N)} \\ \hline
+Rekurencyjna                   &                                                       \\ \hline
+Zstępująca (ze spamiętywaniem) &                                                       \\ \hline
+Wstępująca                     &                                                       \\ \hline
+\end{tabular}
+\caption{Tabela pokazuje wielkości problemów (nawiasowania mnożenia macierzy), które można rozwiązać w sensownym czasie danym podejściem (rekurencyjnym, zstępującym, wstępującym).}
+\label{table:matrix_chain_results}
+\end{table}
+
+\textbf{Komentarz (\underline{przemyślane} wnioski):} \hl{TODO..................}
+
+\subsection{Zadanie 2}
+Proszę uzupełnić implementację metody \verb|reconstructOptimalSolutions()| z~klasy 
+\verb|MatrixChainOrderExtendedResult|. 
+Metoda powinna zwracać przykładowe (prawidłowe) odtworzenie rozwiązania (czyli tekstową 
+reprezentację przedstawiającą kolejność mnożenia macierzy w łańcuchu).
+Przykładowe uruchomienie (wynik) wraz z zaimplementowanym kodem źródłowym tej metody należy
+umieścić w sprawozdaniu.
+
+\subsection{Zadanie 3}
+Proszę wykonać implementację (w klasie 
+\verb|pl.edu.pw.ee.aisd2026zex6.lcs.| \verb|LongestCommonSubsequence|) 
+problemu znajdowania najdłuższego wspólnego 
+podciągu zgodnie z ustaleniami podanymi ,,na tablicy'' -- jeśli jeszcze nie były podane, to proszę 
+się po nie zgłosić (w trakcie zajęć).
+
+\section{Na zakończenie}
+To już prawie koniec, ale ciągle nie wolno nam zapomnieć, że:
+\begin{itemize}
+    \item pod koniec zajęć zapisujemy swoje zmiany (robimy \textit{commit}) i oznaczamy tagiem ze znacznikiem czasowym \textbf{CW\_6\_EOT};
+    \item wszystkie zmiany (cały kod źródłowy) muszą trafić do repozytorium.    
+    A~ostatnią zmianę (\textit{commit}) należy oznaczyć tagiem ze znacznikiem czasowym \textbf{CW\_6\_FINAL};    
+    \item końcową wersję tego dokumentu (PDF) należy umiecić w ISOD-zie.
+\end{itemize}
+
+
+
+\end{document}
